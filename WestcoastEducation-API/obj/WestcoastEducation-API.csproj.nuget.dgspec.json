@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WEducation-API\\WEducation-API.csproj": {}
+    "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WestcoastEducation-API\\WestcoastEducation-API.csproj": {}
   },
   "projects": {
-    "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WEducation-API\\WEducation-API.csproj": {
+    "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WestcoastEducation-API\\WestcoastEducation-API.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WEducation-API\\WEducation-API.csproj",
-        "projectName": "WEducation-API",
-        "projectPath": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WEducation-API\\WEducation-API.csproj",
+        "projectUniqueName": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WestcoastEducation-API\\WestcoastEducation-API.csproj",
+        "projectName": "WestcoastEducation-API",
+        "projectPath": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WestcoastEducation-API\\WestcoastEducation-API.csproj",
         "packagesPath": "C:\\Users\\Imad\\.nuget\\packages\\",
-        "outputPath": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WEducation-API\\obj\\",
+        "outputPath": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WestcoastEducation-API\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

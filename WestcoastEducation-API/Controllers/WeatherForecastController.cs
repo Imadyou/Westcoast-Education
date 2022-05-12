@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace WEducation_API.Controllers;
+namespace WestcoastEducation_API.Controllers;
 
 [ApiController]
 [Route("[controller]")]

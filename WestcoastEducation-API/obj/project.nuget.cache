@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QcUyCHUjCsFL5XWMp3RIcj3GS0rcfmcW8WhxpO9TwTFmBUmf7jcrvsMSAnZ8R4MQFlb/SnOBnjM1DlSRNTNzLw==",
+  "dgSpecHash": "YnUt22hKD2dbI/wUtKLP0/lH0I0c9Z/g99lLthyiCIPBzU3q+NClUi5p6oSyRe8I/0SBQcsN7B924kzXeYiRTQ==",
   "success": true,
-  "projectFilePath": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WEducation-API\\WEducation-API.csproj",
+  "projectFilePath": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WestcoastEducation-API\\WestcoastEducation-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",

@@ -1,4 +1,4 @@
-namespace WEducation_API;
+namespace WestcoastEducation_API;
 
 public class WeatherForecast
 {
