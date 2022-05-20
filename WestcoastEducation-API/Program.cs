@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using WestcoastEducation_API.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+builder.Services.AddDbContext<CourseContext>(Options=> {
+    Options.UseSqlite("Sqlite");
 
+});
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
