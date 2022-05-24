@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "kPHpu/NqfROicWbllPy2GVouQdOja4VHg//1eRga3ZwhhDQAvzIwSwLGEF9AwaUmwxNHk/+NZrTk4OAtXLZlFg==",
+  "dgSpecHash": "cUVh6h91ekz2NMD057lkPbhNpL7a4tqs0el7hys9PRa5KNdu9wYG5d5w9T8xoEt0QCa2OLa29zxsdd+6u5+5Cg==",
   "success": true,
-  "projectFilePath": "c:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WestcoastEducation-API\\WestcoastEducation-API.csproj",
+  "projectFilePath": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WestcoastEducation-API\\WestcoastEducation-API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Imad\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.4\\microsoft.data.sqlite.core.6.0.4.nupkg.sha512",

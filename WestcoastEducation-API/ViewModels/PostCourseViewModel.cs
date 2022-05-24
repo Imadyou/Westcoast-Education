@@ -4,16 +4,17 @@ using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Threading.Tasks;
+using WestcoastEducation_API.Models;
 
-namespace WestcoastEducation_API.Models
+namespace WestcoastEducation_API.ViewModels
 {
-    public class Course
+    public class PostCourseViewModel
     {
         [Key]
-        public int Id { get; set; }
-        public string? Title { get; set; }
-        public int Days { get; set; }
-        public int Hours { get; set; }
+        public int CourseId {get;set;}
+        public string? CourseTitle { get; set; }
+        public int NumberOfDays { get; set; }
+        public int VideoHours { get; set; }
         // [ForeignKey("CatergoryId")]
         // public Category Category { get; set; } = new Category();
         public string? Description { get; set; }

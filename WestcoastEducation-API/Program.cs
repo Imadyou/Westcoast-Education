@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddDbContext<CourseContext>(Options=> {
-    Options.UseSqlite("Sqlite");
+    Options.UseSqlite(builder.Configuration.GetConnectionString("Sqlite"));
 
 });
 builder.Services.AddControllers();
