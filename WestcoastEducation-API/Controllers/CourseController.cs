@@ -1,7 +1,9 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WestcoastEducation_API.Data;
+using WestcoastEducation_API.Interfaces;
 using WestcoastEducation_API.Models;
+using WestcoastEducation_API.Repositories;
 using WestcoastEducation_API.ViewModels;
 
 namespace WestcoastEducation_API.Controllers
@@ -11,16 +13,19 @@ namespace WestcoastEducation_API.Controllers
     public class CourseController : ControllerBase
     {
     private readonly CourseContext _context;
+    private readonly ICourseRepository _courseRepo;
 
-    public CourseController(CourseContext context)
+    public CourseController(CourseContext context, ICourseRepository courseRepo )
     {
+      _courseRepo = courseRepo;
       _context = context;
     } 
 
     [HttpGet()]
     public async Task <ActionResult<List<CourseViewModel>>> ListCourses()
     {
-      var response= await _context.Courses.ToListAsync();
+      var response= await _courseRepo.ListAllCoursesAsync();
+
       var courseList=new List<CourseViewModel>();
       foreach(var course in response){
         courseList.Add( new CourseViewModel{
@@ -36,15 +41,21 @@ namespace WestcoastEducation_API.Controllers
     }
 
     [HttpGet("{id}")]
-    public async Task <ActionResult<Course>> GetCoursById(int id)
+    public async Task <ActionResult<CourseViewModel>> GetCoursById(int id)
     {
-      var response = await _context.Courses.FindAsync(id);
+     var response= await _courseRepo.GetCourseAsync(id);
+      
       if(response is null){
         return NotFound($"Vi kunde inte hittat någon kurs med id {id}!");
       }
-
-
-      return Ok( response);
+      var course = new CourseViewModel{
+           Id = response.Id, 
+          Title=response.Title,
+          CourseLength=$"{response.Days} days, {response.Hours} video houres. ",
+           Description=response.Description, 
+          Details=response.Details
+      };
+      return Ok(course);
     }
     
 
