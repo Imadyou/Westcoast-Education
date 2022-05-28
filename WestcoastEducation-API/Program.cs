@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using WestcoastEducation_API.Data;
+using WestcoastEducation_API.Helpers;
 using WestcoastEducation_API.Interfaces;
 using WestcoastEducation_API.Repositories;
 
@@ -12,6 +13,7 @@ builder.Services.AddDbContext<CourseContext>(Options=> {
 });
 //Dependency injection for Interfaces and Classes
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+builder.Services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle

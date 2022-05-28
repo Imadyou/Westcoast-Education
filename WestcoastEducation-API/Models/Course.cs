@@ -12,11 +12,13 @@ namespace WestcoastEducation_API.Models
         [Key]
         public int Id { get; set; }
         public string? Title { get; set; }
-        public int Days { get; set; }
-        public int Hours { get; set; }
-        // [ForeignKey("CatergoryId")]
-        // public Category Category { get; set; } = new Category();
+        public string? Duration { get; set; }
         public string? Description { get; set; }
         public string? Details { get; set; }
+        // public int? CategoryId{get; set;}
+        // [ForeignKey("CategoryId")]
+        // public Category Category{get;set;}=new Category();
+        
+        // public ICollection<StudentCourse> Students { get; set; }= new List<StudentCourse>();
     }
 }

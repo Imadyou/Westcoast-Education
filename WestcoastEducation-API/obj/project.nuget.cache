@@ -1,10 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "cUVh6h91ekz2NMD057lkPbhNpL7a4tqs0el7hys9PRa5KNdu9wYG5d5w9T8xoEt0QCa2OLa29zxsdd+6u5+5Cg==",
+  "dgSpecHash": "JTvDonaK0rTvr2X20bHZKioz82Y+ZYMLDzhvpus95HpTkO+WpqQ1jqlMz41wKoX7co3q+GUThNT0dNLJREXiLA==",
   "success": true,
   "projectFilePath": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WestcoastEducation-API\\WestcoastEducation-API.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Imad\\.nuget\\packages\\automapper\\11.0.0\\automapper.11.0.0.nupkg.sha512",
+    "C:\\Users\\Imad\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\11.0.0\\automapper.extensions.microsoft.dependencyinjection.11.0.0.nupkg.sha512",
     "C:\\Users\\Imad\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
+    "C:\\Users\\Imad\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.data.sqlite.core\\6.0.4\\microsoft.data.sqlite.core.6.0.4.nupkg.sha512",
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.4\\microsoft.entityframeworkcore.6.0.4.nupkg.sha512",
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.4\\microsoft.entityframeworkcore.abstractions.6.0.4.nupkg.sha512",

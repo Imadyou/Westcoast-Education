@@ -10,13 +10,11 @@ namespace WestcoastEducation_API.ViewModels
 {
     public class PostCourseViewModel
     {
-        [Key]
+       
         public int CourseId {get;set;}
         public string? CourseTitle { get; set; }
-        public int NumberOfDays { get; set; }
-        public int VideoHours { get; set; }
-        // [ForeignKey("CatergoryId")]
-        // public Category Category { get; set; } = new Category();
+        public string? CourseDuration { get; set; }
+        public string? Category { get; set; }
         public string? Description { get; set; }
         public string? Details { get; set; }
     }

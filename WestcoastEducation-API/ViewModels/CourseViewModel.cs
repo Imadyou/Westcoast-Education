@@ -14,10 +14,10 @@ namespace WestcoastEducation_API.ViewModels
     [Key]
     public int Id { get; set; }
     public string? Title { get; set; }
-    public string? CourseLength { get; set; }
-    // [ForeignKey("CatergoryId")]
-    // public Category Category { get; set; } = new Category();
+    public string? CourseDuration { get; set; }
+     public string? Category { get; set; }
     public string? Description { get; set; }
     public string? Details { get; set; }
+  
   }
 }
