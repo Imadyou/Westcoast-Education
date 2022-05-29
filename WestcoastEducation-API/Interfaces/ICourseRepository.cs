@@ -11,10 +11,10 @@ namespace WestcoastEducation_API.Interfaces
     {
         public Task<List<CourseViewModel>>ListAllCoursesAsync();
         public Task<PostCourseViewModel?> GetCourseAsync(int id);
-        public Task<CourseViewModel?> ListCoursebycategoryAsync(string category);
+        public Task<CourseViewModel?> GetCoursesByCategoryAsync(string subject);
         public Task AddCourseAsync(PostCourseViewModel model);
-        public Task UpdateCourse(int id ,PostCourseViewModel model);
-        public Task DeleteCourse(int id);
+        public Task UpdateCourseAsync(int id ,PostCourseViewModel model);
+        public Task DeleteCourseAsync(int id);
         public Task<bool> SaveAllAsync();
     }
 }

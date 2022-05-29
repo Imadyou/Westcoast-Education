@@ -54,6 +54,11 @@ namespace WestcoastEducation_API.Controllers
    
     }
     
+    [HttpGet("bycategory/{category}")]
+    public async Task<ActionResult<List<CourseViewModel>>> GetCourseByCategory(string make){
+      return Ok();
+    }
+
 
     [HttpPost()]
     public async Task <ActionResult> AddCourse(PostCourseViewModel model)
@@ -88,7 +93,7 @@ namespace WestcoastEducation_API.Controllers
     {
      try
      {
-       await _courseRepo.UpdateCourse(id,model);
+       await _courseRepo.UpdateCourseAsync(id,model);
        if(await _courseRepo.SaveAllAsync()){
          return NoContent();
        }
@@ -105,7 +110,7 @@ namespace WestcoastEducation_API.Controllers
 
     [HttpDelete("{id}")]
     public async Task<ActionResult> DeleteCourse(int id){
-        await _courseRepo.DeleteCourse(id);
+        await _courseRepo.DeleteCourseAsync(id);
       
       if(await _courseRepo.SaveAllAsync()){
         return NoContent();// StatusCode 204

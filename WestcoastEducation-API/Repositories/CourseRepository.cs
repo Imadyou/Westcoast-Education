@@ -30,7 +30,7 @@ namespace WestcoastEducation_API.Repositories
         
     }
 
-    public async Task DeleteCourse(int id)
+    public async Task DeleteCourseAsync(int id)
     {
        var response = await _context.Courses.FindAsync(id);
        if(response is not null)
@@ -57,7 +57,7 @@ namespace WestcoastEducation_API.Repositories
       return await _context.Courses.ProjectTo<CourseViewModel>(_mapper.ConfigurationProvider).ToListAsync();
     }
 
-    public async Task UpdateCourse(int id, PostCourseViewModel model)
+    public async Task UpdateCourseAsync(int id, PostCourseViewModel model)
     {
       var course = await _context.Courses.FindAsync(id);
 
@@ -73,15 +73,18 @@ namespace WestcoastEducation_API.Repositories
       _context.Courses.Update(course); 
     }
 
-    public Task<CourseViewModel?> ListCoursebycategoryAsync(string category)
-    {
-      throw new NotImplementedException();
-    }
 
     public async Task<bool> SaveAllAsync()
     {
      return await _context.SaveChangesAsync()>0;
     }
 
+    public Task<CourseViewModel?> GetCoursesByCategoryAsync(string subject)
+    {
+         //  return await _context.Courses.Where(c=>c.Subject.ToLower()==category.ToLower())
+    //  .ProcetTo<CourseViewModel>(_mapper.ConfigurationProvider).ToListAsync();
+      throw new NotImplementedException();
+    } 
+    
   }
 }
