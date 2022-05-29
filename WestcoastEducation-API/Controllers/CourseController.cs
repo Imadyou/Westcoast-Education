@@ -54,10 +54,10 @@ namespace WestcoastEducation_API.Controllers
    
     }
     
-    [HttpGet("bycategory/{category}")]
-    public async Task<ActionResult<List<CourseViewModel>>> GetCourseByCategory(string make){
-      return Ok();
-    }
+    // [HttpGet("bycategory/{category}")]
+    // public async Task<ActionResult<List<CourseViewModel>>> GetCourseByCategory(string make){
+    //   return Ok();
+    // }
 
 
     [HttpPost()]

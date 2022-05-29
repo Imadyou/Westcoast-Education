@@ -1,4 +1,6 @@
 using AutoMapper;
+using AutoMapper.QueryableExtensions;
+using Microsoft.EntityFrameworkCore;
 using WestcoastEducation_API.Data;
 using WestcoastEducation_API.Interfaces;
 using WestcoastEducation_API.Models;
@@ -23,9 +25,13 @@ namespace WestcoastEducation_API.Repositories
      await _context.Categories.AddAsync(cat);
     }
 
-    public Task<List<CategoryViewModel>> ListAllcategoriesAsync()
+    public async Task<List<CategoryViewModel>> ListAllCategoriesAsync()
     {
-      throw new NotImplementedException();
+        return await _context.Categories.ProjectTo<CategoryViewModel>(_mapper.ConfigurationProvider).ToListAsync();    
+    }
+    public async Task<bool> SaveAllAsync()
+    {
+       return await _context.SaveChangesAsync()>0;
     }
   }
 }

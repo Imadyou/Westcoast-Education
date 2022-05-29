@@ -19,8 +19,8 @@ namespace WestcoastEducation_API.Helpers
         CreateMap<Course, CourseViewModel>() .ForMember(dest=> dest.CourseDuration, options => options.MapFrom(src =>src.Duration));
 
         CreateMap<PostCategoryViewModel, Category>();
-        CreateMap<Category, CategoryViewModel>();
-        // .ForMember(dest=>dest.CategoryId, Options => Options.MapFrom(Src=> Src.Id));
+        CreateMap<Category, CategoryViewModel>()
+         .ForMember(dest=>dest.CategoryId, Options => Options.MapFrom(Src=> Src.Id));
     }
   }
 }

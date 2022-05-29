@@ -13,6 +13,7 @@ builder.Services.AddDbContext<CourseContext>(Options=> {
 });
 //Dependency injection for Interfaces and Classes
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();
+builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
 builder.Services.AddAutoMapper(typeof(AutoMapperProfiles).Assembly);
 
 builder.Services.AddControllers();
