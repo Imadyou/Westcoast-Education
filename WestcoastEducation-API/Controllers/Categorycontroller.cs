@@ -8,16 +8,16 @@ namespace WestcoastEducation_API.Controllers
 {
   [ApiController]
     [Route("api/v1/categories")]
-    public class Categorycontroller : ControllerBase
+    public class CategoryController : ControllerBase
     {
     private readonly ICategoriesRepository _categoryRepo;
-    public Categorycontroller(ICategoriesRepository categoryRepo)
+    public CategoryController(ICategoriesRepository categoryRepo)
     {
       _categoryRepo = categoryRepo;
 
     }
 
-    [HttpGet("list")]
+        [HttpGet("list")]
         public async Task<ActionResult<List<CategoryViewModel>>>ListALLCategories(){
             
           var list= await _categoryRepo.ListAllCategoriesAsync();

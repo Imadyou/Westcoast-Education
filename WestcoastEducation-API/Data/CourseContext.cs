@@ -9,7 +9,7 @@ namespace WestcoastEducation_API.Data
     
 
         public DbSet <Course> Courses => Set<Course>(); 
-        // public DbSet <Student> Strudents=>Set<Student>();
+        public DbSet <Student> Students=> Set<Student>();
         // public DbSet<Teacher> Teachers =>Set<Teacher>();
         // public DbSet<StudentCourse> StudentCourses=>Set<StudentCourse>();
         public DbSet <Category> Categories=> Set<Category>();
