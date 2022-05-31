@@ -24,10 +24,17 @@ namespace WestcoastEducation_API.Controllers
           return Ok(list);
            
         }
-        [HttpGet("CoursesAndCat")]
+        [HttpGet("categoris/courses")]
         public async Task<ActionResult>ListCategoriesWithCoursesViewModel(){
             var list= await _categoryRepo.ListCategoriesAndCourses();
             return Ok(list);
+        }
+        [HttpGet("{id}/courses")]
+        public async Task<ActionResult>ListCategoryCourses(int id)
+        {
+          var list=await _categoryRepo.ListCategoryCourses(id);
+          return Ok(list);
+
         }
      
         [HttpPost()]

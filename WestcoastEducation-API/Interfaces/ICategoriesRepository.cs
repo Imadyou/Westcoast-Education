@@ -13,7 +13,7 @@ namespace WestcoastEducation_API.Interfaces
         public Task<List<CategoryViewModel>> ListAllCategoriesAsync();
         public Task AddCategoryAsync(PostCategoryViewModel model);
         public Task <List<CategoriesWithCoursesViewModel>> ListCategoriesAndCourses();
-    
+        public Task <CategoriesWithCoursesViewModel?> ListCategoryCourses(int id);
         public Task DeleteCategoryAsync(int id);
         public Task<bool> SaveAllAsync();
     }

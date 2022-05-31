@@ -56,7 +56,22 @@ namespace WestcoastEducation_API.Repositories
         }).ToListAsync();
     }
 
-  
+    public async Task<CategoriesWithCoursesViewModel?> ListCategoryCourses(int id)
+    {
+          return await _context.Categories.Where(ca=>ca.Id==id).Include(c=>c.Courses)
+        .Select(co => new CategoriesWithCoursesViewModel{
+            CategoryId=co.Id,
+            Name=co.Name,
+            Courses =co.Courses
+            .Select( co =>new CourseByCategoryViewModel{
+            Id=co.Id,
+            Title=co.Title,
+            Duration=co.Duration
+            
+        }).ToList()
+    }).SingleOrDefaultAsync();
+    }
+
     public async Task<bool> SaveAllAsync()
     {
        return await _context.SaveChangesAsync()>0;
