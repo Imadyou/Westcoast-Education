@@ -6,6 +6,7 @@ using WestcoastEducation_API.Interfaces;
 using WestcoastEducation_API.Models;
 using WestcoastEducation_API.Repositories;
 using WestcoastEducation_API.ViewModels;
+using WestcoastEducation_API.ViewModels.Category;
 
 namespace WestcoastEducation_API.Controllers
 {
@@ -24,12 +25,14 @@ namespace WestcoastEducation_API.Controllers
      
     } 
 
-    [HttpGet()]
+    [HttpGet("list")]
     public async Task <ActionResult<List<CourseViewModel>>> ListCourses()
     {
     
       var courseList=await _courseRepo.ListAllCoursesAsync();
-        
+        if(courseList is null){
+          return NotFound("databasen är tom läg till en ny kurs i lista och försök en gång till!.... ");
+        }
       return Ok(courseList);
     }
 
@@ -53,12 +56,25 @@ namespace WestcoastEducation_API.Controllers
       }
    
     }
+    [HttpGet("ByCat/{subject}")]
     
-    // [HttpGet("bycategory/{category}")]
-    // public async Task<ActionResult<List<CourseViewModel>>> GetCourseByCategory(string make){
-    //   return Ok();
-    // }
-
+    public async Task<ActionResult<List<CourseByCategoryViewModel>>>GetCoursesByCategory(string subject)
+    {
+      try
+      {
+        
+      var list=await _courseRepo.ListCoursesByCategoryAsync(subject);
+      if (list is null){
+        return NotFound($" Vi kunde inte hitta någon lista med kategori {subject}, eller kategori {subject} finns inte med i kategori listan!...");
+      }
+       return Ok(list);
+      }
+      catch (Exception ex)
+      {
+        
+      return StatusCode(500, ex.Message);
+      }
+    }
 
     [HttpPost()]
     public async Task <ActionResult> AddCourse(PostCourseViewModel model)
@@ -83,13 +99,11 @@ namespace WestcoastEducation_API.Controllers
 
                 return StatusCode(500, ex.Message);
             }
-         
-
-      
+            
     }
 
     [HttpPut("{id}")]
-    public async Task<ActionResult> UpdateCourse(int id, PostCourseViewModel model)
+    public async Task<ActionResult> UpdateCourse(int id, PutCourseViewModel model)
     {
      try
      {

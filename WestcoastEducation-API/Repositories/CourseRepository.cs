@@ -9,6 +9,7 @@ using WestcoastEducation_API.Data;
 using WestcoastEducation_API.Interfaces;
 using WestcoastEducation_API.Models;
 using WestcoastEducation_API.ViewModels;
+using WestcoastEducation_API.ViewModels.Category;
 
 namespace WestcoastEducation_API.Repositories
 {
@@ -25,9 +26,16 @@ namespace WestcoastEducation_API.Repositories
 
     public async Task AddCourseAsync(PostCourseViewModel model)
     {
+      var subject= await _context.Categories
+      .Include(c=>c.Courses).Where(ca=>ca.Name!.ToLower()==model.Subject!.ToLower()).SingleOrDefaultAsync();
+      if(subject is null){
+        // Om kategorien inte finns i databas skapa en ny kategori subject.
+        // await _context.Categories.AddAsync(subject);
+        throw new Exception($"Tyvärr vi har ingen kategori med namnet: {model.Subject}");
+      }
       var courseToAdd = _mapper.Map<Course>(model);
-       await _context.Courses.AddAsync(courseToAdd);
-        
+       courseToAdd.Category = subject;
+       await _context.Courses.AddAsync(courseToAdd);    
     }
 
     public async Task DeleteCourseAsync(int id)
@@ -39,10 +47,10 @@ namespace WestcoastEducation_API.Repositories
        }
     }
 
-    public async Task<PostCourseViewModel?> GetCourseAsync(int id)
+    public async Task<CourseViewModel?> GetCourseAsync(int id)
     {
       return await _context.Courses.Where(c=>c.Id==id)
-      .ProjectTo<PostCourseViewModel>(_mapper.ConfigurationProvider).SingleOrDefaultAsync();
+      .ProjectTo<CourseViewModel>(_mapper.ConfigurationProvider).SingleOrDefaultAsync();
     }
        // DEn metoden ska tas bort sedan..
         public async Task<CourseViewModel?> GetCoursebyTitleAsync(string courseTitle)
@@ -56,15 +64,27 @@ namespace WestcoastEducation_API.Repositories
     {
       return await _context.Courses.ProjectTo<CourseViewModel>(_mapper.ConfigurationProvider).ToListAsync();
     }
+public async Task<List<CourseByCategoryViewModel>> ListCoursesByCategoryAsync(string subject)
+    {
+    return await _context.Courses.Include(ca => ca.Category)
+        .Where(c => c.Category.Name!.ToLower() == subject.ToLower())
+        .ProjectTo<CourseByCategoryViewModel>(_mapper.ConfigurationProvider)
+        .ToListAsync();
+   
+    }
 
-    public async Task UpdateCourseAsync(int id, PostCourseViewModel model)
+    public async Task UpdateCourseAsync(int id, PutCourseViewModel
+ model)
     {
       var course = await _context.Courses.FindAsync(id);
-
+      //  var subject= await _context.Categories
+      // .Include(ca=>ca.Courses).Where(c=>c.Name!.ToLower()==model.Subject!.ToLower()).SingleOrDefaultAsync();
+     
       if(course is null)
       {
         throw new Exception($" Vi kunde inte hitta någon kurs med kurs nummer {id}");  
       }
+   
       course.Title=model.CourseTitle;
       course.Duration=model.CourseDuration;
       course.Description=model.Description;
@@ -79,12 +99,7 @@ namespace WestcoastEducation_API.Repositories
      return await _context.SaveChangesAsync()>0;
     }
 
-    public Task<CourseViewModel?> GetCoursesByCategoryAsync(string subject)
-    {
-         //  return await _context.Courses.Where(c=>c.Subject.ToLower()==category.ToLower())
-    //  .ProcetTo<CourseViewModel>(_mapper.ConfigurationProvider).ToListAsync();
-      throw new NotImplementedException();
-    } 
+   
     
   }
 }

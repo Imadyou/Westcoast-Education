@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using WestcoastEducation_API.Interfaces;
 using WestcoastEducation_API.Models;
 using WestcoastEducation_API.Repositories;
 using WestcoastEducation_API.ViewModels.Category;
@@ -9,37 +10,69 @@ namespace WestcoastEducation_API.Controllers
     [Route("api/v1/categories")]
     public class Categorycontroller : ControllerBase
     {
-    private readonly CategoriesRepository _categoryRepo;
-    public Categorycontroller(CategoriesRepository categoryRepo)
+    private readonly ICategoriesRepository _categoryRepo;
+    public Categorycontroller(ICategoriesRepository categoryRepo)
     {
       _categoryRepo = categoryRepo;
 
     }
 
-    [HttpGet()]
+    [HttpGet("list")]
         public async Task<ActionResult<List<CategoryViewModel>>>ListALLCategories(){
             
-          return await _categoryRepo.ListAllCategoriesAsync();
+          var list= await _categoryRepo.ListAllCategoriesAsync();
+          return Ok(list);
            
+        }
+        [HttpGet("CoursesAndCat")]
+        public async Task<ActionResult>ListCategoriesWithCoursesViewModel(){
+            var list= await _categoryRepo.ListCategoriesAndCourses();
+            return Ok(list);
         }
      
         [HttpPost()]
         public async Task<ActionResult> AddCategory(PostCategoryViewModel model)
         {
-            await _categoryRepo.AddCategoryAsync(model);
+            try
+            {
+             await _categoryRepo.AddCategoryAsync(model);
             if(await _categoryRepo.SaveAllAsync()){
 
            return StatusCode(201);
             }
-            return StatusCode(500, "Det gicka fel när vi skulle spara kategorin!");
+            else
+            {
+           return StatusCode(500, "Det gicka fel när vi skulle spara kategorin!");
+            }
+
+ 
+            }
+            catch (Exception)
+            {
+                
+               throw new Exception ("Det gicka fel när vi skulle spara kategorin!");
+            }
+;          
         }
 
-        // [HttpDelete()]
-        // public async Task<ActionResult> DeleteCategory()
-        // {
-        //   return NoContent();
-        // }
-
-
+        [HttpDelete("{id}")]
+        public async Task<ActionResult> DeleteCategory(int id)
+        {
+            try
+            {
+                await _categoryRepo.DeleteCategoryAsync(id);
+                if (await _categoryRepo.SaveAllAsync())
+                {
+                    return NoContent();
+                }
+                return StatusCode(500, $"Det gick inte att ta bort kategori med id: {id} !");
+            }
+            catch (Exception ex)
+            {
+                
+               return StatusCode (500, ex.Message);
+            }
+       
+        }
     }
 }
