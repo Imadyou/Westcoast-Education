@@ -19,8 +19,17 @@ namespace WestcoastEducation_API.Data
       .WithMany(c => c.Students)
       .UsingEntity(join => join.ToTable("StudentsCourses"));
 
+      builder.Entity<Category>()
+      .HasMany(c=>c.Teachers)
+      .WithMany(t=>t.Competencis)
+      .UsingEntity(join=>join.ToTable("CategoriesTeachers"));
+
+      builder.Entity<Teacher>()
+      .HasMany(t=>t.Courses)
+      .WithMany(c=>c.Teachers)
+      .UsingEntity(join=>join.ToTable("TeachersCourses"));
+
       base.OnModelCreating(builder);
     }
-
   }
 }

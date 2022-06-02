@@ -7,6 +7,7 @@ using WestcoastEducation_API.Models;
 using WestcoastEducation_API.ViewModels;
 using WestcoastEducation_API.ViewModels.Category;
 using WestcoastEducation_API.ViewModels.Students;
+using WestcoastEducation_API.ViewModels.Teachers;
 
 namespace WestcoastEducation_API.Helpers
 {
@@ -27,6 +28,10 @@ namespace WestcoastEducation_API.Helpers
 
         CreateMap<PostStudentViewModel, Student>();
         CreateMap<Student, StudentViewModel>();
+
+        CreateMap<PostTeacherViewModel, Teacher>();
+        CreateMap<Teacher,TeacherViewModel>();
+
 
     }
   }

@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WestcoastEducation_API.Data;
 
@@ -10,9 +11,10 @@ using WestcoastEducation_API.Data;
 namespace WestcoastEducation_API.Migrations
 {
     [DbContext(typeof(CourseContext))]
-    partial class CourseContextModelSnapshot : ModelSnapshot
+    [Migration("20220602194315_Added Relations Teachers with Courses and Categoris with Teachers")]
+    partial class AddedRelationsTeacherswithCoursesandCategoriswithTeachers
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.4");
@@ -152,7 +154,12 @@ namespace WestcoastEducation_API.Migrations
                     b.Property<int>("PhoneNumber")
                         .HasColumnType("INTEGER");
 
+                    b.Property<int?>("TeacherId")
+                        .HasColumnType("INTEGER");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("TeacherId");
 
                     b.ToTable("Teachers");
                 });
@@ -213,9 +220,21 @@ namespace WestcoastEducation_API.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("WestcoastEducation_API.Models.Teacher", b =>
+                {
+                    b.HasOne("WestcoastEducation_API.Models.Teacher", null)
+                        .WithMany("Teachers")
+                        .HasForeignKey("TeacherId");
+                });
+
             modelBuilder.Entity("WestcoastEducation_API.Models.Category", b =>
                 {
                     b.Navigation("Courses");
+                });
+
+            modelBuilder.Entity("WestcoastEducation_API.Models.Teacher", b =>
+                {
+                    b.Navigation("Teachers");
                 });
 #pragma warning restore 612, 618
         }

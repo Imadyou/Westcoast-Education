@@ -23,7 +23,6 @@ namespace WestcoastEducation_API.Controllers
     {
       _repo = repo;
       
-   
     }
     [HttpGet()]
     public async Task<ActionResult> ListStudents(){
@@ -42,7 +41,7 @@ namespace WestcoastEducation_API.Controllers
           }
           return StatusCode (500, "Det gick inte att spara studenten..!" );
          
-         
+        
       }
       catch (Exception ex)
       {
@@ -53,7 +52,7 @@ namespace WestcoastEducation_API.Controllers
        }
 
     [HttpPut("{id}")]
-public async Task<ActionResult> UpdateStudent(int id, StudentViewModel model){
+    public async Task<ActionResult> UpdateStudent(int id, StudentViewModel model){
 
   try
   {
@@ -71,8 +70,8 @@ public async Task<ActionResult> UpdateStudent(int id, StudentViewModel model){
 
 }
 
-[HttpDelete("{id}")]
-public async Task<ActionResult> DeleteStudent(int id){
+    [HttpDelete("{id}")]
+     public async Task<ActionResult> DeleteStudent(int id){
   await _repo.DeleteStudentAsync(id);
   if (await _repo.SaveAllAsync())
   {

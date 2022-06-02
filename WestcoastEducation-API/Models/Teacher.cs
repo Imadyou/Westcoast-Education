@@ -11,6 +11,6 @@ namespace WestcoastEducation_API.Models
     {
         
         public ICollection<Category> Competencis { get; set; } = new List<Category>();
-
+        public ICollection <Course> Courses{ get; set; }=new List<Course>();
     }
 }

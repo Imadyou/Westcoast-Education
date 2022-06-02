@@ -20,5 +20,6 @@ namespace WestcoastEducation_API.Models
         public Category Category{get;set;}=new Category();
         
         public ICollection<Student> Students { get; set; }= new List<Student>();
+        public ICollection<Teacher> Teachers { get; set; }=new List<Teacher>();
     }
 }
