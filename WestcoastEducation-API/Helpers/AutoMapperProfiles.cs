@@ -6,7 +6,7 @@ using AutoMapper;
 using WestcoastEducation_API.Models;
 using WestcoastEducation_API.ViewModels;
 using WestcoastEducation_API.ViewModels.Category;
-using WestcoastEducation_API.ViewModels.Studen;
+using WestcoastEducation_API.ViewModels.Students;
 
 namespace WestcoastEducation_API.Helpers
 {
@@ -25,8 +25,8 @@ namespace WestcoastEducation_API.Helpers
         CreateMap<Category, CategoryViewModel>()
          .ForMember(dest=>dest.CategoryId, Options => Options.MapFrom(Src=> Src.Id));
 
-         CreateMap<PostStudentViewModel, Student>();
-         CreateMap<Student, StudentViewModel>();
+        CreateMap<PostStudentViewModel, Student>();
+        CreateMap<Student, StudentViewModel>();
 
     }
   }

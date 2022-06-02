@@ -19,6 +19,6 @@ namespace WestcoastEducation_API.Models
         [ForeignKey("CategoryId")]
         public Category Category{get;set;}=new Category();
         
-        // public ICollection<StudentCourse> Students { get; set; }= new List<StudentCourse>();
+        public ICollection<Student> Students { get; set; }= new List<Student>();
     }
 }

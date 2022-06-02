@@ -93,7 +93,18 @@ public async Task<List<CourseByCategoryViewModel>> ListCoursesByCategoryAsync(st
       _context.Courses.Update(course); 
     }
 
+  public async Task AddStudentToCourseAsync(int courseId, int studentId)
+    {   
+          var student= await _context.Students.FindAsync(studentId);
+          if(student is null){throw new Exception($"Vi kune inte hitta student med Id {studentId}"); }
 
+          var course= await _context.Courses.FindAsync(courseId);
+            if(student is null){throw new Exception($"Vi kune inte hitta kursen med Id {courseId}"); }
+            
+          course!.Students.Add(student!);
+          _context.Update(course);
+               
+    }
     public async Task<bool> SaveAllAsync()
     {
      return await _context.SaveChangesAsync()>0;

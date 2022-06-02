@@ -8,6 +8,6 @@ namespace WestcoastEducation_API.Models
 {
     public class Student:PersonInfo
     {
-        public ICollection<StudentCourse> Courses {get; set;}= new List<StudentCourse>();
+        public ICollection<Course>?  Courses {get; set;}= new List<Course>();
     }
 }

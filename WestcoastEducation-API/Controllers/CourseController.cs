@@ -17,11 +17,14 @@ namespace WestcoastEducation_API.Controllers
    
     private readonly ICourseRepository _courseRepo;
     private readonly IMapper _mapper;
+    private readonly CourseContext _context;
 
-    public CourseController( ICourseRepository courseRepo, IMapper mapper )
+    public CourseController( ICourseRepository courseRepo, IMapper mapper, CourseContext context)
     {
+      _context = context;
       _mapper = mapper;
       _courseRepo = courseRepo;
+    
      
     } 
 
@@ -131,6 +134,23 @@ namespace WestcoastEducation_API.Controllers
         }
         return StatusCode(500, "Hoppsan något gick fel!..");
     }
+    [HttpPatch("{courseId}")]
+    public async Task <ActionResult> AddStudentToCourse(int courseId, int studentId)
+    {   
+      try
+      {
+        
+       await _courseRepo.AddStudentToCourseAsync(courseId,studentId);
+
+       if( await _courseRepo.SaveAllAsync()){  return NoContent();  }
+          return StatusCode(500, "Ett fel inträffade när kursen sklulle ändras!");
+      }
+      catch (Exception ex)
+      {
+        
+       return StatusCode(500, ex.Message);
+      }
+            
+    }
+   }
   }
-    
-}

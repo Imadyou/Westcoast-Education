@@ -15,6 +15,7 @@ namespace WestcoastEducation_API.Interfaces
         public Task<CourseViewModel?> GetCourseAsync(int id);
         public Task AddCourseAsync(PostCourseViewModel model);
         public Task UpdateCourseAsync(int id ,PutCourseViewModel model);
+         public Task AddStudentToCourseAsync(int courseId, int studentId);
         public Task DeleteCourseAsync(int id);
         public Task<bool> SaveAllAsync();
     }

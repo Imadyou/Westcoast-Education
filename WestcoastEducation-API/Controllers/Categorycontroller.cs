@@ -17,7 +17,7 @@ namespace WestcoastEducation_API.Controllers
 
     }
 
-        [HttpGet("list")]
+        [HttpGet()]
         public async Task<ActionResult<List<CategoryViewModel>>>ListALLCategories(){
             
           var list= await _categoryRepo.ListAllCategoriesAsync();

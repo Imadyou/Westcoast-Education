@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using WestcoastEducation_API.Data;
 
@@ -10,27 +11,13 @@ using WestcoastEducation_API.Data;
 namespace WestcoastEducation_API.Migrations
 {
     [DbContext(typeof(CourseContext))]
-    partial class CourseContextModelSnapshot : ModelSnapshot
+    [Migration("20220531184716_Added Student and StudentCourse Entity")]
+    partial class AddedStudentandStudentCourseEntity
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.4");
-
-            modelBuilder.Entity("CourseStudent", b =>
-                {
-                    b.Property<int>("CoursesId")
-                        .HasColumnType("INTEGER");
-
-                    b.Property<int>("StudentsId")
-                        .HasColumnType("INTEGER");
-
-                    b.HasKey("CoursesId", "StudentsId");
-
-                    b.HasIndex("StudentsId");
-
-                    b.ToTable("StudentsCourses", (string)null);
-                });
 
             modelBuilder.Entity("WestcoastEducation_API.Models.Category", b =>
                 {
@@ -41,12 +28,7 @@ namespace WestcoastEducation_API.Migrations
                     b.Property<string>("Name")
                         .HasColumnType("TEXT");
 
-                    b.Property<int?>("TeacherId")
-                        .HasColumnType("INTEGER");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("TeacherId");
 
                     b.ToTable("Categories");
                 });
@@ -106,52 +88,19 @@ namespace WestcoastEducation_API.Migrations
                     b.ToTable("Students");
                 });
 
-            modelBuilder.Entity("WestcoastEducation_API.Models.Teacher", b =>
+            modelBuilder.Entity("WestcoastEducation_API.Models.StudentCourse", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
+                    b.Property<int>("CourseId")
                         .HasColumnType("INTEGER");
 
-                    b.Property<string>("Address")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("Email")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("FirstName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<string>("LastName")
-                        .HasColumnType("TEXT");
-
-                    b.Property<int>("PhoneNumber")
+                    b.Property<int>("StudentId")
                         .HasColumnType("INTEGER");
 
-                    b.HasKey("Id");
+                    b.HasKey("CourseId", "StudentId");
 
-                    b.ToTable("Teachers");
-                });
+                    b.HasIndex("StudentId");
 
-            modelBuilder.Entity("CourseStudent", b =>
-                {
-                    b.HasOne("WestcoastEducation_API.Models.Course", null)
-                        .WithMany()
-                        .HasForeignKey("CoursesId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.HasOne("WestcoastEducation_API.Models.Student", null)
-                        .WithMany()
-                        .HasForeignKey("StudentsId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-                });
-
-            modelBuilder.Entity("WestcoastEducation_API.Models.Category", b =>
-                {
-                    b.HasOne("WestcoastEducation_API.Models.Teacher", null)
-                        .WithMany("Competencis")
-                        .HasForeignKey("TeacherId");
+                    b.ToTable("StudentCourses");
                 });
 
             modelBuilder.Entity("WestcoastEducation_API.Models.Course", b =>
@@ -165,14 +114,33 @@ namespace WestcoastEducation_API.Migrations
                     b.Navigation("Category");
                 });
 
+            modelBuilder.Entity("WestcoastEducation_API.Models.StudentCourse", b =>
+                {
+                    b.HasOne("WestcoastEducation_API.Models.Course", "Course")
+                        .WithMany()
+                        .HasForeignKey("CourseId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("WestcoastEducation_API.Models.Student", "Student")
+                        .WithMany("Courses")
+                        .HasForeignKey("StudentId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Course");
+
+                    b.Navigation("Student");
+                });
+
             modelBuilder.Entity("WestcoastEducation_API.Models.Category", b =>
                 {
                     b.Navigation("Courses");
                 });
 
-            modelBuilder.Entity("WestcoastEducation_API.Models.Teacher", b =>
+            modelBuilder.Entity("WestcoastEducation_API.Models.Student", b =>
                 {
-                    b.Navigation("Competencis");
+                    b.Navigation("Courses");
                 });
 #pragma warning restore 612, 618
         }
