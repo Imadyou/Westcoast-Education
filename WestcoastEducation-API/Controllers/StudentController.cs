@@ -24,14 +24,56 @@ namespace WestcoastEducation_API.Controllers
       _repo = repo;
       
     }
-    [HttpGet()]
+    [HttpGet("list")]
     public async Task<ActionResult> ListStudents(){
       return Ok(await _repo.ListStudentsAsync());
     }
+   [HttpGet("{id}")]
+    public async Task<ActionResult<StudentViewModel>>GetStudent(int id)
+    {
+      
+       try
+       {
+         
+        var model = await _repo.GetStudentAsync(id);
+        if(model is not null)
+        {
+          return Ok(model);
+        }
+        return BadRequest($"Vi kunde inte hitta elev med id:{id}!");
+         
+       }
+       catch (Exception ex)
+       {
+         
+      return StatusCode(500, ex.Message);
+       }
+    }
 
-
+     [HttpGet("byemail/{email}")]
+    public async Task<ActionResult<StudentViewModel>>GetStudentByEmail(string email)
+    {
+      
+       try
+       {
+         
+        var model = await _repo.GetStudentByEmailAsync(email);
+        if(model is not null)
+        {
+          return Ok(model);
+        }
+        return BadRequest($"Vi kunde inte hitta någon elev med mejleadress:{email}!");
+         
+       }
+       catch (Exception ex)
+       {
+         
+      return StatusCode(500, ex.Message);
+       }
+    }
     [HttpPost()]
-    public async Task<ActionResult>AddStudents(PostStudentViewModel model){
+    public async Task<ActionResult>AddStudents(PostStudentViewModel model)
+    {
       try
       {
           await _repo.AddStudentAsync(model);
@@ -39,7 +81,7 @@ namespace WestcoastEducation_API.Controllers
           if(  await _repo.SaveAllAsync()){
           return StatusCode(201);
           }
-          return StatusCode (500, "Det gick inte att spara studenten..!" );
+          return StatusCode (500, "Det gick inte att spara eleves information!" );
          
         
       }
@@ -52,15 +94,16 @@ namespace WestcoastEducation_API.Controllers
        }
 
     [HttpPut("{id}")]
-    public async Task<ActionResult> UpdateStudent(int id, StudentViewModel model){
+    public async Task<ActionResult> UpdateStudent(int id, PostStudentViewModel model)
+    {
 
   try
   {
-    await _repo.UpdateStudentAsync(id,model);
+    await _repo.UpdateStudentAsync(id, model);
     if(await _repo.SaveAllAsync()){
       return NoContent();
     }
-    return StatusCode(500, " Ett fel inträgffade när studentens information skulle ändras..!" );
+    return StatusCode(500, " Ett fel inträgffade när elevs information skulle ändras..!" );
   }
   catch (Exception ex)
   {
@@ -71,7 +114,8 @@ namespace WestcoastEducation_API.Controllers
 }
 
     [HttpDelete("{id}")]
-     public async Task<ActionResult> DeleteStudent(int id){
+     public async Task<ActionResult> DeleteStudent(int id)
+     {
   await _repo.DeleteStudentAsync(id);
   if (await _repo.SaveAllAsync())
   {

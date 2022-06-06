@@ -29,8 +29,7 @@ namespace WestcoastEducation_API.Repositories
       var subject= await _context.Categories
       .Include(c=>c.Courses).Where(ca=>ca.Name!.ToLower()==model.Subject!.ToLower()).SingleOrDefaultAsync();
       if(subject is null){
-        // Om kategorien inte finns i databas skapa en ny kategori subject.
-        // await _context.Categories.AddAsync(subject);
+    
         throw new Exception($"Tyvärr vi har ingen kategori med namnet: {model.Subject}");
       }
       var courseToAdd = _mapper.Map<Course>(model);
@@ -70,15 +69,13 @@ public async Task<List<CourseByCategoryViewModel>> ListCoursesByCategoryAsync(st
         .Where(c => c.Category.Name!.ToLower() == subject.ToLower())
         .ProjectTo<CourseByCategoryViewModel>(_mapper.ConfigurationProvider)
         .ToListAsync();
-   
     }
 
     public async Task UpdateCourseAsync(int id, PutCourseViewModel
  model)
     {
       var course = await _context.Courses.FindAsync(id);
-      //  var subject= await _context.Categories
-      // .Include(ca=>ca.Courses).Where(c=>c.Name!.ToLower()==model.Subject!.ToLower()).SingleOrDefaultAsync();
+    
      
       if(course is null)
       {

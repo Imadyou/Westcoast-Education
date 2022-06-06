@@ -10,7 +10,7 @@ namespace WestcoastEducation_API.Models
     public class Teacher: PersonInfo
     {
         
-        public ICollection<Category> Competencis { get; set; } = new List<Category>();
+        public ICollection<Category> Skills { get; set; } = new List<Category>();
         public ICollection <Course> Courses{ get; set; }=new List<Course>();
     }
 }

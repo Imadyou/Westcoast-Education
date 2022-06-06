@@ -23,15 +23,14 @@ namespace WestcoastEducation_API.Helpers
         CreateMap<Course, CourseByCategoryViewModel>();
         
         CreateMap<PostCategoryViewModel, Category>();
+        CreateMap< Category,PostCategoryViewModel>();
         CreateMap<Category, CategoryViewModel>()
          .ForMember(dest=>dest.CategoryId, Options => Options.MapFrom(Src=> Src.Id));
-
+       
         CreateMap<PostStudentViewModel, Student>();
-        CreateMap<Student, StudentViewModel>();
+        CreateMap<Student, StudentViewModel>().ForMember(dest=>dest.Name,options=>options.MapFrom(src=>string.Concat(src.FirstName," ", src.LastName)));
 
-        CreateMap<PostTeacherViewModel, Teacher>();
-        CreateMap<Teacher,TeacherViewModel>();
-
+  
 
     }
   }

@@ -8,7 +8,7 @@ namespace WestcoastEducation_API.ViewModels.Students
 {
     public class PostStudentViewModel
     { 
-        public int Id { get; set; }
+       
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Email { get; set; }

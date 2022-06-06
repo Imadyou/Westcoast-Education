@@ -1,9 +1,10 @@
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using WestcoastEducation_API.Models;
 
 namespace WestcoastEducation_API.Data
 {
-  public class CourseContext : DbContext
+  public class CourseContext : IdentityDbContext
   {
     public CourseContext(DbContextOptions options) : base(options) { }
 
@@ -21,7 +22,7 @@ namespace WestcoastEducation_API.Data
 
       builder.Entity<Category>()
       .HasMany(c=>c.Teachers)
-      .WithMany(t=>t.Competencis)
+      .WithMany(t=>t.Skills)
       .UsingEntity(join=>join.ToTable("CategoriesTeachers"));
 
       builder.Entity<Teacher>()

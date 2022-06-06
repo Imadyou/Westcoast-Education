@@ -1,4 +1,8 @@
+using System.Text;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.IdentityModel.Tokens;
 using WestcoastEducation_API.Data;
 using WestcoastEducation_API.Helpers;
 using WestcoastEducation_API.Interfaces;
@@ -11,6 +15,19 @@ builder.Services.AddDbContext<CourseContext>(Options=> {
     Options.UseSqlite(builder.Configuration.GetConnectionString("Sqlite"));
 
 });
+//Authontication 
+builder.Services.AddIdentity<IdentityUser, IdentityRole>(option =>
+{
+    option.Password.RequireDigit = true;
+    option.Password.RequireLowercase = true;
+    option.Password.RequireUppercase = true;
+    option.Password.RequireNonAlphanumeric = true;
+    option.Password.RequiredLength = 8;
+
+    option.Lockout.MaxFailedAccessAttempts = 3;
+    option.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
+}).AddEntityFrameworkStores<CourseContext>();
+
 //Dependency injection for Interfaces and Classes
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();
 builder.Services.AddScoped<ICategoriesRepository, CategoriesRepository>();
@@ -33,8 +50,8 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
-
-app.UseAuthorization();
+app.UseAuthentication();
+// app.UseAuthorization();
 
 app.MapControllers();
 

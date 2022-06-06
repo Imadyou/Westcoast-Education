@@ -9,7 +9,7 @@ namespace WestcoastEducation_API.Models
     {
         public int CategoryId { get; set; }
         public int TeacherId { get; set; }
-        public Category? Student { get; set; }
-        public Teacher? Course { get; set; }
+        public Category? Category { get; set; }
+        public Teacher? Teacher { get; set; }
     }
 }
