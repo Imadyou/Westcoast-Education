@@ -67,9 +67,6 @@ namespace WestcoastEducation_API.Controllers
       {
         
       var list=await _courseRepo.ListCoursesByCategoryAsync(subject);
-      if (list is null){
-        return NotFound($" Vi kunde inte hitta någon lista med kategori {subject}, eller kategori {subject} finns inte med i kategori listan!...");
-      }
        return Ok(list);
       }
       catch (Exception ex)
@@ -134,13 +131,13 @@ namespace WestcoastEducation_API.Controllers
         }
         return StatusCode(500, "Hoppsan något gick fel!..");
     }
-    [HttpPatch("{courseId}")]
-    public async Task <ActionResult> AddStudentToCourse(int courseId, int studentId)
+    [HttpPatch("AddToStudent{studentEmail}")]
+    public async Task <ActionResult> AddStudentToCourse(int courseId, string studentEmail)
     {   
       try
       {
         
-       await _courseRepo.AddStudentToCourseAsync(courseId,studentId);
+       await _courseRepo.AddStudentToCourseAsync(courseId,studentEmail);
 
        if( await _courseRepo.SaveAllAsync()){  return NoContent();  }
           return StatusCode(500, "Ett fel inträffade när vi sklulle lägga sutdneten till kursen!");

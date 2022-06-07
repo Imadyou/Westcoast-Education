@@ -17,25 +17,31 @@ namespace WestcoastEducation_API.Controllers
 
     }
 
-        [HttpGet()]
+        [HttpGet("list")]
         public async Task<ActionResult<List<CategoryViewModel>>>ListALLCategories(){
             
           var list= await _categoryRepo.ListAllCategoriesAsync();
           return Ok(list);
            
         }
-        [HttpGet("categoris/courses")]
-        public async Task<ActionResult>ListCategoriesWithCoursesViewModel(){
-            var list= await _categoryRepo.ListCategoriesAndCourses();
-            return Ok(list);
-        }
-        [HttpGet("{id}/courses")]
-        public async Task<ActionResult>ListCategoryCourses(int id)
-        {
-          var list=await _categoryRepo.ListCategoryCourses(id);
-          return Ok(list);
+        // [HttpGet("Allcategoriswithcourses")]
+        // public async Task<ActionResult>ListCategoriesWithCoursesViewModel(){
+        //     var list= await _categoryRepo.ListCategoriesAndCoursesAsync();
+        //     return Ok(list);
+        // }
+        // [HttpGet("{id}/courses")]
+        // public async Task<ActionResult>ListCoursesByCategoryId(int id)
+        // {
+        //   var list=await _categoryRepo.ListCategoryCoursesAsync(id);
+        //   return Ok(list);
 
-        }
+        // }
+        //     [HttpGet("by/{subject}/courses")]
+        // public async Task<ActionResult>ListCoursesByCategorySubject(string subject)
+        // {
+        //   var list=await _categoryRepo.ListCoursesByCategoriAsync(subject);
+        //   return Ok(list);
+        // }
      
         [HttpPost()]
         public async Task<ActionResult> AddCategory(PostCategoryViewModel model)
@@ -47,17 +53,14 @@ namespace WestcoastEducation_API.Controllers
 
            return StatusCode(201);
             }
-            else
-            {
+           
            return StatusCode(500, "Det gicka fel när vi skulle spara kategorin!");
-            }
-
  
             }
-            catch (Exception)
+            catch (Exception ex)
             {
                 
-               throw new Exception ("Det gicka fel när vi skulle spara kategorin!");
+              return StatusCode (500, ex.Message );
             }
 ;          
         }

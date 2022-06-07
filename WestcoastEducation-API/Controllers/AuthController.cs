@@ -32,18 +32,16 @@ namespace Step03_ASP.NET_Identity.ViewModels
       var result = await _userManager.CreateAsync(user, model.Password);
 
      
-        var userData = new RegisterViewModel
-        {
-          Email = user.Email,
-          Password= user.PasswordHash,
+        // var userData = new RegisterViewModel
+        // {
+        //   Email = user.Email,
+        //   Password= user.PasswordHash,
       
-        };
+        // };
        await _context.SaveChangesAsync();
-        return StatusCode(201, userData);
+        return StatusCode(201, user);
    }
- 
-      
-    
+   
        
     }
 }

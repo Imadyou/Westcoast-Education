@@ -28,13 +28,23 @@ namespace WestcoastEducation_API.Repositories
     {
       var subject= await _context.Categories
       .Include(c=>c.Courses).Where(ca=>ca.Name!.ToLower()==model.Subject!.ToLower()).SingleOrDefaultAsync();
-      if(subject is null){
-    
-        throw new Exception($"Tyvärr vi har ingen kategori med namnet: {model.Subject}");
-      }
+      if(subject is not null){
+      
       var courseToAdd = _mapper.Map<Course>(model);
        courseToAdd.Category = subject;
        await _context.Courses.AddAsync(courseToAdd);    
+      }
+      else
+      {
+         var catToAdd= new Category();
+        catToAdd.Name=model.Subject;
+        await _context.Categories.AddAsync(catToAdd);
+        await _context.SaveChangesAsync();
+         var courseToAdd = _mapper.Map<Course>(model);
+        courseToAdd.Category = catToAdd;
+       await _context.Courses.AddAsync(courseToAdd);  
+      }
+
     }
 
     public async Task DeleteCourseAsync(int id)
@@ -65,18 +75,26 @@ namespace WestcoastEducation_API.Repositories
     }
 public async Task<List<CourseByCategoryViewModel>> ListCoursesByCategoryAsync(string subject)
     {
-    return await _context.Courses.Include(ca => ca.Category)
+    var result= await _context.Courses.Include(ca => ca.Category)
         .Where(c => c.Category.Name!.ToLower() == subject.ToLower())
         .ProjectTo<CourseByCategoryViewModel>(_mapper.ConfigurationProvider)
         .ToListAsync();
+        if(result.Count== 0)
+        {
+          throw new Exception($"Vi kunde inte hitta kurser som har kategori {subject}");
+        }
+        return result;
     }
 
-    public async Task UpdateCourseAsync(int id, PutCourseViewModel
- model)
+    public async Task UpdateCourseAsync(int id, PutCourseViewModel model)
     {
+        
+       var subject= await _context.Categories
+      .Include(c=>c.Courses).Where(ca=>ca.Name!.ToLower()==model.Subject!.ToLower()).SingleOrDefaultAsync();
+       if(subject is null){throw new Exception($"Kategorin {model.Subject}  finns inte va snäll och välj en annan kategori, eller först lägg kategorin i databasen");}
       var course = await _context.Courses.FindAsync(id);
     
-     
+  
       if(course is null)
       {
         throw new Exception($" Vi kunde inte hitta någon kurs med kurs nummer {id}");  
@@ -86,17 +104,30 @@ public async Task<List<CourseByCategoryViewModel>> ListCoursesByCategoryAsync(st
       course.Duration=model.CourseDuration;
       course.Description=model.Description;
       course.Details=model.Details;
-
+      course.CategoryId=subject.Id!;
       _context.Courses.Update(course); 
     }
 
-  public async Task AddStudentToCourseAsync(int courseId, int studentId)
+  // public async Task AddStudentToCourseAsync(int courseId, int studentId)
+  //   {   
+  //         var student= await _context.Students.FindAsync(studentId);
+  //         if(student is null){throw new Exception($"Vi kune inte hitta student med Id {studentId}"); }
+
+  //         var course= await _context.Courses.FindAsync(courseId);
+  //           if(student is null){throw new Exception($"Vi kune inte hitta kursen med Id {courseId}"); }
+            
+  //         course!.Students.Add(student!);
+  //         _context.Update(course);
+               
+  //   }
+    
+    public async Task AddStudentToCourseAsync(int courseId, string studentEmail)
     {   
-          var student= await _context.Students.FindAsync(studentId);
-          if(student is null){throw new Exception($"Vi kune inte hitta student med Id {studentId}"); }
+          var student= await _context.Students.Where(s=>s.Email==studentEmail).SingleOrDefaultAsync();
+          if(student is null){throw new Exception($"Vi kune inte hitta student med mailet {studentEmail}, kontrollera imatningen"); }
 
           var course= await _context.Courses.FindAsync(courseId);
-            if(student is null){throw new Exception($"Vi kune inte hitta kursen med Id {courseId}"); }
+            if(course is null){throw new Exception($"Vi kune inte hitta kursen med Id {courseId}"); }
             
           course!.Students.Add(student!);
           _context.Update(course);
