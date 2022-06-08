@@ -41,7 +41,7 @@ namespace WestcoastEducation_API.Repositories
         await _context.Categories.AddAsync(catToAdd);
         await _context.SaveChangesAsync();
          var courseToAdd = _mapper.Map<Course>(model);
-        courseToAdd.Category = catToAdd;
+       courseToAdd.Category = catToAdd;
        await _context.Courses.AddAsync(courseToAdd);  
       }
 

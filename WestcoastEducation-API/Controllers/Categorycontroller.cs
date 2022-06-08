@@ -24,11 +24,11 @@ namespace WestcoastEducation_API.Controllers
           return Ok(list);
            
         }
-        // [HttpGet("Allcategoriswithcourses")]
-        // public async Task<ActionResult>ListCategoriesWithCoursesViewModel(){
-        //     var list= await _categoryRepo.ListCategoriesAndCoursesAsync();
-        //     return Ok(list);
-        // }
+        [HttpGet("Allcategoriswithcourses")]
+        public async Task<ActionResult>ListCategoriesWithCoursesViewModel(){
+            var list= await _categoryRepo.ListCategoriesAndCoursesAsync();
+            return Ok(list);
+        }
         // [HttpGet("{id}/courses")]
         // public async Task<ActionResult>ListCoursesByCategoryId(int id)
         // {

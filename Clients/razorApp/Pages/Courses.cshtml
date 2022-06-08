@@ -1,0 +1,22 @@
+﻿@page
+@model razorApp.Pages.CoursesModel
+@{
+    ViewData["Title"] = "vår Kurser";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+    @foreach (var item in Model.Categories)
+    {
+       <h1> @item.Name</h1> 
+    }
+           
+    
+
+           
+      
+    
+    
+ 
+
+    

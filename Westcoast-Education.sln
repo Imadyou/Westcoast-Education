@@ -7,6 +7,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEducation-API", "Weducatio
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WestcoastEducation-API", "WestcoastEducation-API\WestcoastEducation-API.csproj", "{F7D2515B-BE8D-47BC-9850-373865C812C3}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{43D79D11-6A73-450D-84D5-51ABAA7FBAED}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApp", "Clients\MvcApp\MvcApp.csproj", "{B860466A-773A-496D-88FD-A40DD126BF2A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "razorApp", "Clients\razorApp\razorApp.csproj", "{CD1185BC-E2F4-419D-A9CE-6ADFB7C93CEE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -24,5 +30,17 @@ Global
 		{F7D2515B-BE8D-47BC-9850-373865C812C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7D2515B-BE8D-47BC-9850-373865C812C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F7D2515B-BE8D-47BC-9850-373865C812C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B860466A-773A-496D-88FD-A40DD126BF2A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B860466A-773A-496D-88FD-A40DD126BF2A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B860466A-773A-496D-88FD-A40DD126BF2A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B860466A-773A-496D-88FD-A40DD126BF2A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD1185BC-E2F4-419D-A9CE-6ADFB7C93CEE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD1185BC-E2F4-419D-A9CE-6ADFB7C93CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD1185BC-E2F4-419D-A9CE-6ADFB7C93CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD1185BC-E2F4-419D-A9CE-6ADFB7C93CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B860466A-773A-496D-88FD-A40DD126BF2A} = {43D79D11-6A73-450D-84D5-51ABAA7FBAED}
+		{CD1185BC-E2F4-419D-A9CE-6ADFB7C93CEE} = {43D79D11-6A73-450D-84D5-51ABAA7FBAED}
 	EndGlobalSection
 EndGlobal

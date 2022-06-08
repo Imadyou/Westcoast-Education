@@ -41,19 +41,19 @@ namespace WestcoastEducation_API.Repositories
         return await _context.Categories.ProjectTo<CategoryViewModel>(_mapper.ConfigurationProvider).ToListAsync();    
     }
 
-    // public async Task <List<CategoriesWithCoursesViewModel>> ListCategoriesAndCoursesAsync()
-    // {
-    //     return await _context.Categories.Include(c=>c.Courses)
-    //     .Select(ca => new CategoriesWithCoursesViewModel{
-    //         Name=ca.Name,
-    //         Courses =ca.Courses
-    //         .Select(co =>new CourseByCategoryViewModel{
-    //             Id=co.Id,
-    //             Title=co.Title,
-    //             Duration=co.Duration
-    //         }).ToList()
-    //     }).ToListAsync();
-    // }
+    public async Task <List<CategoriesWithCoursesViewModel>> ListCategoriesAndCoursesAsync()
+    {
+        return await _context.Categories.Include(c=>c.Courses)
+        .Select(ca => new CategoriesWithCoursesViewModel{
+            Name=ca.Name,
+            Courses =ca.Courses
+            .Select(co =>new CourseByCategoryViewModel{
+                Id=co.Id,
+                Title=co.Title,
+                Duration=co.Duration
+            }).ToList()
+        }).ToListAsync();
+    }
 
     // public async Task<CategoriesWithCoursesViewModel?> ListCategoryCoursesAsync(int id)
     // {
