@@ -61,39 +61,35 @@ namespace WestcoastEducation_API.Repositories
       return await _context.Courses.Where(c=>c.Id==id)
       .ProjectTo<CourseViewModel>(_mapper.ConfigurationProvider).SingleOrDefaultAsync();
     }
-       // DEn metoden ska tas bort sedan..
-        public async Task<CourseViewModel?> GetCoursebyTitleAsync(string courseTitle)
-        {
-            return await _context.Courses.Where(c => c.Title!.ToLower() == courseTitle.ToLower())
-            .ProjectTo<CourseViewModel>(_mapper.ConfigurationProvider)
-                .SingleOrDefaultAsync();
-        }
 
-        public async Task<List<CourseViewModel>> ListAllCoursesAsync()
+     
+
+        public async Task<List<CourseByCategoryViewModel>> ListAllCoursesAsync()
     {
-      return await _context.Courses.ProjectTo<CourseViewModel>(_mapper.ConfigurationProvider).ToListAsync();
+      return await _context.Courses.ProjectTo<CourseByCategoryViewModel>(_mapper.ConfigurationProvider).ToListAsync();
     }
-public async Task<List<CourseByCategoryViewModel>> ListCoursesByCategoryAsync(string subject)
+    public async Task<List<CourseByCategoryViewModel>> ListCoursesByCategoryAsync(string subject)
     {
     var result= await _context.Courses.Include(ca => ca.Category)
         .Where(c => c.Category.Name!.ToLower() == subject.ToLower())
         .ProjectTo<CourseByCategoryViewModel>(_mapper.ConfigurationProvider)
         .ToListAsync();
+        
         if(result.Count== 0)
         {
           throw new Exception($"Vi kunde inte hitta kurser som har kategori {subject}");
         }
         return result;
     }
+ 
 
     public async Task UpdateCourseAsync(int id, PutCourseViewModel model)
     {
         
        var subject= await _context.Categories
       .Include(c=>c.Courses).Where(ca=>ca.Name!.ToLower()==model.Subject!.ToLower()).SingleOrDefaultAsync();
-       if(subject is null){throw new Exception($"Kategorin {model.Subject}  finns inte va snäll och välj en annan kategori, eller först lägg kategorin i databasen");}
+       if(subject is null){throw new Exception($"Kategorin {model.Subject}  finns inte va snäll och välj en annan kategori, eller lägg kategorin i databasen");}
       var course = await _context.Courses.FindAsync(id);
-    
   
       if(course is null)
       {
@@ -108,18 +104,7 @@ public async Task<List<CourseByCategoryViewModel>> ListCoursesByCategoryAsync(st
       _context.Courses.Update(course); 
     }
 
-  // public async Task AddStudentToCourseAsync(int courseId, int studentId)
-  //   {   
-  //         var student= await _context.Students.FindAsync(studentId);
-  //         if(student is null){throw new Exception($"Vi kune inte hitta student med Id {studentId}"); }
-
-  //         var course= await _context.Courses.FindAsync(courseId);
-  //           if(student is null){throw new Exception($"Vi kune inte hitta kursen med Id {courseId}"); }
-            
-  //         course!.Students.Add(student!);
-  //         _context.Update(course);
-               
-  //   }
+  
     
     public async Task AddStudentToCourseAsync(int courseId, string studentEmail)
     {   

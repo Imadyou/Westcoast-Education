@@ -24,24 +24,8 @@ namespace WestcoastEducation_API.Controllers
           return Ok(list);
            
         }
-        [HttpGet("Allcategoriswithcourses")]
-        public async Task<ActionResult>ListCategoriesWithCoursesViewModel(){
-            var list= await _categoryRepo.ListCategoriesAndCoursesAsync();
-            return Ok(list);
-        }
-        // [HttpGet("{id}/courses")]
-        // public async Task<ActionResult>ListCoursesByCategoryId(int id)
-        // {
-        //   var list=await _categoryRepo.ListCategoryCoursesAsync(id);
-        //   return Ok(list);
-
-        // }
-        //     [HttpGet("by/{subject}/courses")]
-        // public async Task<ActionResult>ListCoursesByCategorySubject(string subject)
-        // {
-        //   var list=await _categoryRepo.ListCoursesByCategoriAsync(subject);
-        //   return Ok(list);
-        // }
+      
+       
      
         [HttpPost()]
         public async Task<ActionResult> AddCategory(PostCategoryViewModel model)

@@ -29,7 +29,7 @@ namespace WestcoastEducation_API.Controllers
     } 
 
     [HttpGet("list")]
-    public async Task <ActionResult<List<CourseViewModel>>> ListCourses()
+    public async Task <ActionResult<List<CourseByCategoryViewModel>>> ListCourses()
     {
     
       var courseList=await _courseRepo.ListAllCoursesAsync();
@@ -61,7 +61,7 @@ namespace WestcoastEducation_API.Controllers
     }
     [HttpGet("ByCat/{subject}")]
     
-    public async Task<ActionResult<List<CourseByCategoryViewModel>>>GetCoursesByCategory(string subject)
+    public async Task<ActionResult<List<CourseByCategoryViewModel>>>ListCoursesByCategory(string subject)
     {
       try
       {
