@@ -1,0 +1,19 @@
+@model MvcApp.ViewModels.Courses.CourseViewModel
+@{
+    ViewData["Title"] = "kurser Information";
+}
+
+<h1>@ViewData["Title"]</h1>
+<article >
+<section class="vehicle-description">
+    <div>Kurs Nummer @Model.Id</div>
+    <div>Kurs Titel @Model.Title</div>
+    <div>Kategori @Model.Subject</div>
+    <div>Längd @Model.CourseDuration</div>
+    <h2> @Model.Details</h2>
+    <hr>
+    <h4>Beskrivning</h4>
+    <p>@Model.Description</p>
+    <a class="go-back" asp-action="Index"><i class="fa-solid fa-left-long"></i>Tillbaka till våra kurser</a>
+  </section>
+</article>

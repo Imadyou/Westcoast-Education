@@ -26,10 +26,27 @@ namespace MvcApp.ViewModels.Courses
             {
               throw new Exception("kunde inte hämta paketet från API application");
             }
-            var result =await response.Content.ReadAsStringAsync();
-            var courses= JsonSerializer.Deserialize<List<CourseByCategoryViewModel>>(result,_options);
+            var courses =await response.Content.ReadFromJsonAsync<List<CourseByCategoryViewModel>>();
+            // var result =await response.Content.ReadAsStringAsync();
+            // var courses= JsonSerializer.Deserialize<List<CourseByCategoryViewModel>>(result,_options);
             return courses?? new List<CourseByCategoryViewModel>();
 
+    }
+
+    public async Task<CourseViewModel>GetCourseById(int id)
+    {
+            var baseUrl = _config.GetValue<string>("baseUrl");
+            var url = $"{baseUrl}/Courses/{id}";
+            using var http=new HttpClient();
+            var response = await http.GetAsync(url);
+            if(!response.IsSuccessStatusCode)
+            {
+              throw new Exception("Det gick inte att hitta kursen!");
+            }
+            var course= await response.Content.ReadFromJsonAsync<CourseViewModel>();
+            // var result =await response.Content.ReadAsStringAsync();
+            // var course= JsonSerializer.Deserialize<CourseViewModel>(result,_options);
+            return course??=new CourseViewModel();
     }
 
   }

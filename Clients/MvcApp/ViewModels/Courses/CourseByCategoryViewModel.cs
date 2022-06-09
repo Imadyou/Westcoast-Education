@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 {
     public class CourseByCategoryViewModel
     {
-     public int? Name { get; set; }
+     public string? Subject { get; set; }
      public int Id { get; set; }
     public string? Title { get; set; }
    

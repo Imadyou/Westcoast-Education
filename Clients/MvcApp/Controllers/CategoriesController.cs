@@ -6,33 +6,38 @@ using System.Text.Json;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
+using MvcApp.Models;
 using MvcApp.ViewModels.Categories;
+using MvcApp.ViewModels.Courses;
 
 namespace MvcApp.Controllers
 {
     [Route("[controller]")]
     public class CategoriesController : Controller
     {
+  
     private readonly IConfiguration _config;
+    private readonly CategoryServiceModel _service;
     public CategoriesController(IConfiguration config)
     {
       _config = config;
+       _service=new CategoryServiceModel(_config);
     }
 
     public async Task<IActionResult> Index()
         {  
-            var options =new JsonSerializerOptions{PropertyNameCaseInsensitive=true};
-            var baseUrl = _config.GetValue<string>("baseUrl");
-            var url = $"{baseUrl}/Categories/list";
-            using var http=new HttpClient();
-            var response = await http.GetAsync(url);
-            if(!response.IsSuccessStatusCode)
+             try
             {
-              Console.WriteLine("kunde inte hämta paketet från API application");
+                
+              var categories =await _service.ListCategories();
+              return View("Index",categories);
             }
-            var result =await response.Content.ReadAsStringAsync();
-            var categories= JsonSerializer.Deserialize<List<CategoryViewModel>>(result,options);      
-            return View();
+            catch (System.Exception)
+            {
+                
+                throw;
+            }
+                 
         }
     
     }

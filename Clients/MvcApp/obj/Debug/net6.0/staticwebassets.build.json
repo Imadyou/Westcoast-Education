@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Y3jY+aD95IMAp2+eNEpj7zuzPwaIJB42I3wUwDluoyo=",
+  "Hash": "5PTkHOxpWcvkdN9g1+LFREOewnkv1Wmm6ZsAbzTEBqI=",
   "Source": "MvcApp",
   "BasePath": "_content/MvcApp",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MvcApp.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\css\\gallery-page.css",
+      "SourceId": "MvcApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\",
+      "BasePath": "_content/MvcApp",
+      "RelativePath": "css/gallery-page.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\gallery-page.css"
+    },
+    {
       "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\css\\styles.css",
       "SourceId": "MvcApp",
       "SourceType": "Discovered",
@@ -66,6 +83,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\styles.css"
+    },
+    {
+      "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\css\\utilities.css",
+      "SourceId": "MvcApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\",
+      "BasePath": "_content/MvcApp",
+      "RelativePath": "css/utilities.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\utilities.css"
+    },
+    {
+      "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\css\\vehicle-detail-page.css",
+      "SourceId": "MvcApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\",
+      "BasePath": "_content/MvcApp",
+      "RelativePath": "css/vehicle-detail-page.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\vehicle-detail-page.css"
     },
     {
       "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\favicon.ico",

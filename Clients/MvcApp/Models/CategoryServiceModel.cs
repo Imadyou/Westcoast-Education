@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text.Json;
 using System.Threading.Tasks;
+using MvcApp.ViewModels.Categories;
 
 namespace MvcApp.Models
 {
@@ -14,6 +15,21 @@ namespace MvcApp.Models
     {
       _config = config;
       _options =new JsonSerializerOptions{PropertyNameCaseInsensitive=true};
+    }
+
+    public async Task<List<CategoryViewModel>>ListCategories(){
+          var baseUrl = _config.GetValue<string>("baseUrl");
+            var url = $"{baseUrl}/Categories/list";
+            using var http=new HttpClient();
+            var response = await http.GetAsync(url);
+            if(!response.IsSuccessStatusCode)
+            {
+              throw new Exception("kunde inte hämta paketet från API application");
+            }
+            var courses =await response.Content.ReadFromJsonAsync<List<CategoryViewModel>>();
+    
+            return courses?? new List<CategoryViewModel>();
+
     }
     
     

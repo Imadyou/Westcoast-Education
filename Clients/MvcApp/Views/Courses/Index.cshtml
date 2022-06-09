@@ -1,18 +1,35 @@
 @model IEnumerable<MvcApp.ViewModels.Courses.CourseByCategoryViewModel>
 @{
-    ViewData["Title"] = "Våra IT-kurser";
+    @* ViewData["Title"] = "Våra IT-kurser"; *@
+    ViewBag.PageTitle = "Start";
 }
 
 <h1>@ViewData["Title"]</h1>
 
 <article>
-    <section>
-
+    <section class="gallery-wrapper">
+          
         @foreach (var course in Model!)
         {
-            <div>
-                <a asp-controller="Courses" asp-action="Details">@course.Name</a>
-                <p>@course.Id @course.Title @course.Duration</p>
+            <div class="gallery-kurs">
+
+               <h4> <a asp-controller='Courses' asp-action="Details"> @course.Subject</a></h4> <br>
+               <table>
+                   <tr>
+                       <td>Kurs nummer </td>
+                       <td>@course.Id </td>
+                   </tr>
+                   <tr>
+                       <td>Title </td>
+                       <td>@course.Title </td>
+                   </tr>
+                   <tr>
+                       <td>Längd </td>
+                       <td>@course.Duration</td>
+                   </tr>
+              </table>
+           
+                
             </div>
         }
     </section>

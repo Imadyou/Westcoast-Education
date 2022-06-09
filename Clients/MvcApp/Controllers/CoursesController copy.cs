@@ -15,18 +15,20 @@ namespace MvcApp.Controllers
     public class coursesController : Controller
     {
     private readonly IConfiguration _config;
+    private readonly CourseServiceModel _service;
     public coursesController(IConfiguration config)
     {
       _config = config;
+      _service=new CourseServiceModel(_config);
     }
-
+[HttpGet()]
     public async Task<IActionResult> Index()
         {  
             try
             {
-                var CourseServiceModel= new CourseServiceModel(_config);
-              var courses =await CourseServiceModel.ListCourses();
-              return View(courses);
+                
+              var courses =await _service.ListCourses();
+              return View("Index",courses);
             }
             catch (System.Exception)
             {
@@ -36,6 +38,20 @@ namespace MvcApp.Controllers
                  
         }
 
-    
+     [HttpGet("{id}")]
+    public async Task<IActionResult> Details(int id)
+    {
+        try
+        {
+         var course=await _service.GetCourseById(id);
+         return View("Details",course);
+        }
+        catch (System.Exception)
+        {
+            
+            throw;
+        }
+    }
+
     }
 }
