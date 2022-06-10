@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5PTkHOxpWcvkdN9g1+LFREOewnkv1Wmm6ZsAbzTEBqI=",
+  "Hash": "fQdnFdcb9yMYtBw0fF/qLmKLv7zl69xh3grl+/aOwmU=",
   "Source": "MvcApp",
   "BasePath": "_content/MvcApp",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MvcApp.bundle.scp.css"
+    },
+    {
+      "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\css\\Course-detail-page.css",
+      "SourceId": "MvcApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\",
+      "BasePath": "_content/MvcApp",
+      "RelativePath": "css/Course-detail-page.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\Course-detail-page.css"
     },
     {
       "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\css\\gallery-page.css",
@@ -102,23 +119,6 @@
       "OriginalItemSpec": "wwwroot\\css\\utilities.css"
     },
     {
-      "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\css\\vehicle-detail-page.css",
-      "SourceId": "MvcApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\",
-      "BasePath": "_content/MvcApp",
-      "RelativePath": "css/vehicle-detail-page.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\vehicle-detail-page.css"
-    },
-    {
       "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\favicon.ico",
       "SourceId": "MvcApp",
       "SourceType": "Discovered",
@@ -134,6 +134,57 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\Images\\CardBackground.png",
+      "SourceId": "MvcApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\",
+      "BasePath": "_content/MvcApp",
+      "RelativePath": "Images/CardBackground.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\CardBackground.png"
+    },
+    {
+      "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\Images\\Education.jpg",
+      "SourceId": "MvcApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\",
+      "BasePath": "_content/MvcApp",
+      "RelativePath": "Images/Education.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Images\\Education.jpg"
+    },
+    {
+      "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\js\\app.js",
+      "SourceId": "MvcApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\",
+      "BasePath": "_content/MvcApp",
+      "RelativePath": "js/app.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\js\\app.js"
     }
   ]
 }

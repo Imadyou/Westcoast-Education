@@ -21,13 +21,13 @@ namespace MvcApp.Controllers
       _config = config;
       _service=new CourseServiceModel(_config);
     }
-[HttpGet()]
-    public async Task<IActionResult> Index()
+[HttpGet("{id}")]
+    public async Task<IActionResult> Index(int id)
         {  
             try
             {
                 
-              var courses =await _service.ListCourses();
+              var courses =await _service.ListCoursesByCatId(id);
               return View("Index",courses);
             }
             catch (System.Exception)
@@ -38,20 +38,20 @@ namespace MvcApp.Controllers
                  
         }
 
-     [HttpGet("{id}")]
-    public async Task<IActionResult> Details(int id)
-    {
-        try
-        {
-         var course=await _service.GetCourseById(id);
-         return View("Details",course);
-        }
-        catch (System.Exception)
-        {
+    //  [HttpGet()]
+    // public async Task<IActionResult> Details(int id)
+    // {
+    //     try
+    //     {
+    //      var course=await _service.GetCourseById(id);
+    //      return View("Details",course);
+    //     }
+    //     catch (System.Exception)
+    //     {
             
-            throw;
-        }
-    }
+    //         throw;
+    //     }
+    // }
 
     }
 }

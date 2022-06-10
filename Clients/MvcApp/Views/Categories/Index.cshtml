@@ -3,7 +3,7 @@
     @* ViewData["Title"] = "Våra IT-kurser"; *@
     ViewBag.PageTitle = "Kategori";
 }
-
+<link rel="stylesheet" href="~/css/gallery-page.css">
 <h1>@ViewData["Title"]</h1>
 
 <article>
@@ -11,11 +11,15 @@
           
         @foreach (var category in Model!)
         {
-            <div class="Categories">
+            <div class="gallery-card">
 
-               <a asp-controller='Courses' asp-action="Details"> @category.Name</a> <br>
-                    
+             <a asp-controller="Courses" asp-action="Index" asp-route-id="@category.CategoryId"><h1>@category.Name</h1></a>
+            
             </div>
+           
         }
     </section>
 </article>
+
+
+

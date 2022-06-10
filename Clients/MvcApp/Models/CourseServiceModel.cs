@@ -17,9 +17,9 @@ namespace MvcApp.ViewModels.Courses
       _options =new JsonSerializerOptions{PropertyNameCaseInsensitive=true};
     }
     
-    public async Task<List<CourseByCategoryViewModel>>ListCourses(){
+    public async Task<List<CourseByCategoryViewModel>>ListCoursesByCatId(int id){
           var baseUrl = _config.GetValue<string>("baseUrl");
-            var url = $"{baseUrl}/Courses/list";
+            var url = $"{baseUrl}/Courses/category/{id}";
             using var http=new HttpClient();
             var response = await http.GetAsync(url);
             if(!response.IsSuccessStatusCode)

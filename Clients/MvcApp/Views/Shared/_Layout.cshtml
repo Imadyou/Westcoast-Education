@@ -12,9 +12,9 @@
    </head>
    <body>
      <nav id="navbar">
-         <h1 class="logo"><span class="text primary">  <i class="fa-solid fa-graduation-cap"></i> Westcoast </span> Education</h1>
+         <h1 class="logo"><i class="fa-solid fa-graduation-cap"></i> Westcoast Education</h1>
          <ul>
-             <li><a href="~/Home">Start</a></li>
+             <li><a asp-controller="Home" asp-action="Index">Start</a></li>
              <li><a asp-controller="Categories" asp-action="Index">Våra kurser</a></li>
              <li><a href="#">Om Oss</a></li>
              <li><a href="#">Login</a></li>
@@ -24,6 +24,9 @@
        @RenderBody()
 
        </main>
+
+     
    </body>
+
    </html>
    
