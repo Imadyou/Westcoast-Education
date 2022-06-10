@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "fQdnFdcb9yMYtBw0fF/qLmKLv7zl69xh3grl+/aOwmU=",
+  "Hash": "IkbweBNhh/J2bkhaFklcS+cejOxVCRS39ltmQZOmMBw=",
   "Source": "MvcApp",
   "BasePath": "_content/MvcApp",
   "Mode": "Default",
@@ -51,12 +51,12 @@
       "OriginalItemSpec": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\MvcApp.bundle.scp.css"
     },
     {
-      "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\css\\Course-detail-page.css",
+      "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\css\\course-card.css",
       "SourceId": "MvcApp",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\",
       "BasePath": "_content/MvcApp",
-      "RelativePath": "css/Course-detail-page.css",
+      "RelativePath": "css/course-card.css",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -65,7 +65,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\Course-detail-page.css"
+      "OriginalItemSpec": "wwwroot\\css\\course-card.css"
     },
     {
       "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\css\\gallery-page.css",

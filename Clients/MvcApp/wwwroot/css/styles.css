@@ -84,19 +84,3 @@ h2 {
 .text-primary {
     color: rgb(30, 31, 30);
 }
-
-.gallery-wrapper {
-    align-self: center;
-    padding: 2rem;
-}
-
-.gallery-kurs {
-    border: rgb(63, 50, 63) solid 3px;
-    border-radius: 3px;
-    text-align: left;
-    margin: 2rem;
-}
-
-.gallery-kurs table tr {
-    text-align: left;
-}

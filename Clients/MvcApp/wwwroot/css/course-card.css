@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,700;1,100;1,200;1,300;1,400;1,900&family=Roboto:ital,wght@0,100;0,400;0,700;1,100;1,400;1,700&display=swap');
+
+/* Reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a {
+    padding-bottom: 0;
+}
+
+h2 {
+    text-decoration: none;
+}
+
+.gallery-courses {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.course-card table {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    text-align: left;
+    font-size: x-large;
+    font-family: 'Roboto', sans-serif;
+    border: rgb(63, 50, 63) solid 3px;
+    border-radius: 3px;
+    box-shadow: 0rem 0 1rem 0.2rem rgba(63, 50, 63, 0.6);
+}
+
+.btn a h3 {
+    text-decoration: none;
+    color: aliceblue;
+    padding: 1rem 1rem;
+    opacity: 0.9;
+    font-size: medium;
+    border-radius: 2px;
+    background-color: rgb(63, 50, 63);
+}

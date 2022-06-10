@@ -30,28 +30,28 @@ namespace MvcApp.Controllers
               var courses =await _service.ListCoursesByCatId(id);
               return View("Index",courses);
             }
-            catch (System.Exception)
+            catch (Exception ex)
             {
                 
-                throw;
+              return StatusCode(500, "Det finns inga kurser med den kategori än...!");
             }
                  
         }
 
-    //  [HttpGet()]
-    // public async Task<IActionResult> Details(int id)
-    // {
-    //     try
-    //     {
-    //      var course=await _service.GetCourseById(id);
-    //      return View("Details",course);
-    //     }
-    //     catch (System.Exception)
-    //     {
+     [HttpGet("by/{id}")]
+    public async Task<IActionResult> Details(int id)
+    {
+        try
+        {
+         var course=await _service.GetCourseById(id);
+         return View("Details",course);
+        }
+        catch (System.Exception)
+        {
             
-    //         throw;
-    //     }
-    // }
+            throw;
+        }
+    }
 
     }
 }
