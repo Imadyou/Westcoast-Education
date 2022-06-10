@@ -10,7 +10,7 @@
 
 body,
 textarea {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Poppins';
 }
 
 main {
@@ -83,4 +83,14 @@ h2 {
 
 .text-primary {
     color: rgb(30, 31, 30);
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color: rgb(63, 50, 63);
+    color: white;
 }

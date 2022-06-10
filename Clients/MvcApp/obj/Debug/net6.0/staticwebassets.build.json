@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "IkbweBNhh/J2bkhaFklcS+cejOxVCRS39ltmQZOmMBw=",
+  "Hash": "Drp87VkUBH7Dh3fUIigFTdi0Rhw/8D1LeU6uLfXqlZk=",
   "Source": "MvcApp",
   "BasePath": "_content/MvcApp",
   "Mode": "Default",
@@ -68,6 +68,23 @@
       "OriginalItemSpec": "wwwroot\\css\\course-card.css"
     },
     {
+      "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\css\\course-details.css",
+      "SourceId": "MvcApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\",
+      "BasePath": "_content/MvcApp",
+      "RelativePath": "css/course-details.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\course-details.css"
+    },
+    {
       "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\css\\gallery-page.css",
       "SourceId": "MvcApp",
       "SourceType": "Discovered",
@@ -100,23 +117,6 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\styles.css"
-    },
-    {
-      "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\css\\utilities.css",
-      "SourceId": "MvcApp",
-      "SourceType": "Discovered",
-      "ContentRoot": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\",
-      "BasePath": "_content/MvcApp",
-      "RelativePath": "css/utilities.css",
-      "AssetKind": "All",
-      "AssetMode": "All",
-      "AssetRole": "Primary",
-      "RelatedAsset": "",
-      "AssetTraitName": "",
-      "AssetTraitValue": "",
-      "CopyToOutputDirectory": "Never",
-      "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\css\\utilities.css"
     },
     {
       "Identity": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\Clients\\MvcApp\\wwwroot\\favicon.ico",

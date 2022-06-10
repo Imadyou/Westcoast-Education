@@ -30,7 +30,7 @@ namespace MvcApp.Controllers
               var courses =await _service.ListCoursesByCatId(id);
               return View("Index",courses);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 
               return StatusCode(500, "Det finns inga kurser med den kategori än...!");

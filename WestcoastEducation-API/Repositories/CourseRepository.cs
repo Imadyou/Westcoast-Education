@@ -81,6 +81,17 @@ namespace WestcoastEducation_API.Repositories
         }
         return result;
     }
+    public async Task<List<CourseByCategoryViewModel>>ListCoursesByCategoryIdAsync(int catId){
+       var result= await _context.Courses.Include(ca => ca.Category)
+        .Where(c => c.Category.Id! == catId)
+        .ProjectTo<CourseByCategoryViewModel>(_mapper.ConfigurationProvider)
+        .ToListAsync();
+         if(result.Count== 0)
+        {
+          throw new Exception($"Vi kunde inte hitta kurser som har kategori Id: {catId}");
+        }
+        return result;
+    }
  
 
     public async Task UpdateCourseAsync(int id, PutCourseViewModel model)
@@ -123,7 +134,17 @@ namespace WestcoastEducation_API.Repositories
      return await _context.SaveChangesAsync()>0;
     }
 
-   
-    
+    public async Task<List<CourseViewModel>> ListCoursesFullAsync()
+    {
+      var result= await _context.Courses.Include(c=>c.Category) .ProjectTo<CourseViewModel>(_mapper.ConfigurationProvider)
+        .ToListAsync();
+         if(result is null)
+        {
+          throw new Exception($"Vi kunde int hitta några kurser. var snäll och lägg till kurser till kurs listan!");
+        }
+        return result;
+    }
+
+ 
   }
 }

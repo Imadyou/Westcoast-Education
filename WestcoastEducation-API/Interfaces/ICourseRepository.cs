@@ -10,8 +10,12 @@ namespace WestcoastEducation_API.Interfaces
 {
     public interface ICourseRepository
     {
+        public Task<List<CourseViewModel>>ListCoursesFullAsync();
         public Task<List<CourseByCategoryViewModel>>ListAllCoursesAsync();
         public Task<List<CourseByCategoryViewModel>> ListCoursesByCategoryAsync(string subject);
+
+        public Task<List<CourseByCategoryViewModel>> ListCoursesByCategoryIdAsync(int catId);
+        
         public Task<CourseViewModel?> GetCourseAsync(int id);
         public Task AddCourseAsync(PostCourseViewModel model);
         public Task UpdateCourseAsync(int id ,PutCourseViewModel model);

@@ -1,19 +1,22 @@
 @model MvcApp.ViewModels.Courses.CourseViewModel
 @{
-    ViewData["Title"] = "kurser Information";
+    ViewData["Title"] = "Kurse Information";
 }
+<link rel="stylesheet" href="~/css/course-details.css">
 
-<h1>@ViewData["Title"]</h1>
+<h2>@ViewData["Title"]</h2>
 <article >
-<section class="vehicle-description">
+<section class="wrapper">
+  <div class="course-description">
     <div>Kurs Nummer @Model.Id</div>
     <div>Kurs Titel @Model.Title</div>
     <div>Kategori @Model.Subject</div>
     <div>Längd @Model.CourseDuration</div>
-    <h2> @Model.Details</h2>
+    <h3> Detalj @Model.Details</h3>
     <hr>
     <h4>Beskrivning</h4>
     <p>@Model.Description</p>
-    <a class="go-back" asp-action="Index"><i class="fa-solid fa-left-long"></i>Tillbaka till våra kurser</a>
+    <a class="go-back" a asp-controller="Categories" asp-action="Index"><i class="fa-solid fa-left-long"></i>Tillbaka till kurser</a>
+    </div>
   </section>
 </article>

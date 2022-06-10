@@ -1,0 +1,16 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "99ee81e1-a5bc-4ab0-b5bf-58bcf96e1401": {
+      "ProjectGuid": "99ee81e1-a5bc-4ab0-b5bf-58bcf96e1401",
+      "DisplayName": "AdminApp",
+      "ColorIndex": 0
+    },
+    "f6089e55-afc3-4d17-a26e-90c01b3afe66": {
+      "ProjectGuid": "f6089e55-afc3-4d17-a26e-90c01b3afe66",
+      "DisplayName": "Solution Items",
+      "ColorIndex": 1
+    }
+  },
+  "NextColorIndex": 2
+}
