@@ -11,8 +11,8 @@ using WestcoastEducation_API.Data;
 namespace WestcoastEducation_API.Migrations
 {
     [DbContext(typeof(CourseContext))]
-    [Migration("20220604141855_ Modifies the names och category in tachers to skills")]
-    partial class Modifiesthenamesochcategoryintacherstoskills
+    [Migration("20220615072441_init")]
+    partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

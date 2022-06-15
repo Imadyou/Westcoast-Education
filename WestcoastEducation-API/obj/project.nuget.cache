@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "P3KVWVrYi8+Ro/Muoxsb0Ej1vpXuE7F1KSigJ0jTJX+aT3YQ8MFT0sed2fNX/M9B9t8UwClpAO363ZdUHpLGFQ==",
+  "dgSpecHash": "Vav8VhKdzxXhd1+VWCxvifhiKQXK/cESHsKIf8iuEMuxNBgAdHAwIkkJLlL8nT53/KktZVvvq0D61ejzU8jQMw==",
   "success": true,
   "projectFilePath": "C:\\Code\\WbbutvecklingKurs2\\Westcoast-Education\\WestcoastEducation-API\\WestcoastEducation-API.csproj",
   "expectedPackageFiles": [
@@ -30,11 +30,11 @@
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.5\\microsoft.entityframeworkcore.6.0.5.nupkg.sha512",
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.entityframeworkcore.abstractions\\6.0.5\\microsoft.entityframeworkcore.abstractions.6.0.5.nupkg.sha512",
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.entityframeworkcore.analyzers\\6.0.5\\microsoft.entityframeworkcore.analyzers.6.0.5.nupkg.sha512",
-    "C:\\Users\\Imad\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.5\\microsoft.entityframeworkcore.design.6.0.5.nupkg.sha512",
+    "C:\\Users\\Imad\\.nuget\\packages\\microsoft.entityframeworkcore.design\\6.0.4\\microsoft.entityframeworkcore.design.6.0.4.nupkg.sha512",
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\6.0.5\\microsoft.entityframeworkcore.relational.6.0.5.nupkg.sha512",
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite\\6.0.4\\microsoft.entityframeworkcore.sqlite.6.0.4.nupkg.sha512",
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.entityframeworkcore.sqlite.core\\6.0.4\\microsoft.entityframeworkcore.sqlite.core.6.0.4.nupkg.sha512",
-    "C:\\Users\\Imad\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.5\\microsoft.entityframeworkcore.tools.6.0.5.nupkg.sha512",
+    "C:\\Users\\Imad\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\6.0.4\\microsoft.entityframeworkcore.tools.6.0.4.nupkg.sha512",
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\Imad\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",

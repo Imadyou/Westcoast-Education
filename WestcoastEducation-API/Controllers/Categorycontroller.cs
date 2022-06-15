@@ -6,7 +6,7 @@ using WestcoastEducation_API.ViewModels.Category;
 
 namespace WestcoastEducation_API.Controllers
 {
-  [ApiController]
+    [ApiController]
     [Route("api/v1/categories")]
     public class CategoryController : ControllerBase
     {
@@ -45,8 +45,7 @@ namespace WestcoastEducation_API.Controllers
             {
                 
               return StatusCode (500, ex.Message );
-            }
-;          
+            };          
         }
 
         [HttpDelete("{id}")]

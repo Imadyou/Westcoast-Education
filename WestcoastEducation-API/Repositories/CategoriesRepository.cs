@@ -22,8 +22,19 @@ namespace WestcoastEducation_API.Repositories
 
     public async Task AddCategoryAsync(PostCategoryViewModel model)
     {
-     var cat = _mapper.Map<Category>(model);
-     await _context.Categories.AddAsync(cat);
+      
+     var categories= await _context.Categories.ToListAsync();
+     foreach (var cat in categories)
+     {
+      if (cat.Name==model.Name)
+      {
+        throw new Exception($"Kategorin {model.Name} fnns redan i vå kategori lista");
+      }
+      
+     }
+     var catToAdd = _mapper.Map<Category>(model);
+
+     await _context.Categories.AddAsync(catToAdd);
     }
 
     public async Task DeleteCategoryAsync(int id)

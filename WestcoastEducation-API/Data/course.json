@@ -1,0 +1,78 @@
+[{
+        "CourseId": 1174,
+        "CourseTitle": ".Net-utvecklare",
+        "Subject": ".Net",
+        "CourseDuration": "12 månader, 250 timmar videoinspelning",
+        "Description": "Utbildningen innehåller Mycket praktiska moment som laborationer och övningsuppgifter som ger dig en stor praktisk nytta",
+        "Details": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede."
+
+    },
+    {
+        "CourseId": 1175,
+        "CourseTitle": "Java-utvecklare",
+        "Subject": "Java",
+        "CourseDuration": "6 månader, 75 timmar videoinspelning",
+        "Description": "Utbildningen innehåller Mycket praktiska moment som laborationer och övningsuppgifter som ger dig en stor praktisk nytta",
+        "Details": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede."
+    },
+    {
+        "CourseId": 1176,
+        "CourseTitle": "Python-utvecklare",
+        "Subject": "Python",
+        "CourseDuration": "9 månader, 85 timmar videoinspelning",
+        "Description": "Utbildningen innehåller Mycket praktiska moment som laborationer och övningsuppgifter som ger dig en stor praktisk nytta",
+        "Details": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede."
+    },
+    {
+        "CourseId": 1177,
+        "CourseTitle": "Frontend-utvecklare",
+        "Subject": "JavaScript",
+        "CourseDuration": "16 månader, 200 timmar videoinspelning",
+        "Description": "Utbildningen innehåller Mycket praktiska moment som laborationer och övningsuppgifter som ger dig en stor praktisk nytta",
+        "Details": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede."
+    },
+    {
+        "CourseId": 1178,
+        "CourseTitle": "Backend-utvecklare",
+        "Subject": "C#",
+        "CourseDuration": "12 månader, 175 timmar videoinspelning",
+        "Description": "Utbildningen innehåller Mycket praktiska moment som laborationer och övningsuppgifter som ger dig en stor praktisk nytta",
+        "Details": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede."
+    },
+    {
+        "CourseId": 1179,
+        "CourseTitle": "C#-avancerad",
+        "Subject": "C#",
+        "CourseDuration": "6 månader, 90 timmar videoinspelning",
+        "Description": "Utbildningen innehåller Mycket praktiska moment som laborationer och övningsuppgifter som ger dig en stor praktisk nytta",
+        "Details": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede."
+    },
+    {
+        "CourseId": 1180,
+        "CourseTitle": "Java-Grund",
+        "Subject": "Java",
+        "CourseDuration": "3 månader, 45 timmar videoinspelning",
+        "Description": "Utbildningen innehåller grundläggande Java programmering språk kunskap och  övningsuppgifter som ger dig en stor praktisk nytta",
+        "Details": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede."
+
+    },
+    {
+        "CourseId": 1181,
+        "CourseTitle": "Swift-utvecklare",
+        "Subject": "swift",
+        "CourseDuration": "9 månader, 176 timmar videoinspelning",
+        "Description": "Utbildningen innehåller grundläggande Swift programmering språk kunskap och övningsuppgifter som ger dig en stor praktisk nytta",
+        "Details": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede."
+
+    },
+    {
+        "CourseId": 1182,
+        "CourseTitle": "TypeScript Frontend-utvecklare",
+        "Subject": "TypeScript",
+        "CourseDuration": "9 månader, 96 timmar videoinspelning",
+        "Description": "Utbildningen innehåller Mycket kunskap och  övningsuppgifter som ger dig en stor praktisk nytta",
+        "Details": "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede."
+
+    }
+
+]

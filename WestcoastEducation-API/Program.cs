@@ -53,6 +53,21 @@ app.UseHttpsRedirection();
 app.UseAuthentication();
 // app.UseAuthorization();
 
-app.MapControllers();
+ app.MapControllers();
 
-app.Run();
+using var scope = app.Services.CreateScope();
+var services = scope.ServiceProvider;
+try
+{
+  var context = services.GetRequiredService<CourseContext>();
+  await context.Database.MigrateAsync();
+  await LoadData.LoadCategories(context);
+  await LoadData.LoadCourses(context);
+}
+catch (Exception ex)
+{
+  var logger = services.GetRequiredService<ILogger<Program>>();
+  logger.LogError(ex, "Ett fel inträffade när migrering utfördes");
+}
+
+ await app.RunAsync();
