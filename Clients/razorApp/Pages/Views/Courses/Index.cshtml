@@ -1,0 +1,68 @@
+@page
+@model razorApp.Pages.Views.Courses.Index
+@{
+    ViewData["Title"] = "Redigera Kurser";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<h3> Vår Kurser</h3>
+
+<p>
+    <a asp-page="/Views/Courses/Create">Lägg till</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+               Kurs nummer
+            </th>
+            <th>
+                Kurse Title
+            </th>
+            <th>
+             Kategori
+            </th>
+            <th>
+              Kurs Längd
+            </th>
+            <th>
+               Beskrivning
+            </th>
+            <th>
+                Detaljer
+            </th>
+          
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var course in Model.Courses) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => course.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelcourse => course.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelcourse => course.Subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelcourse => course.CourseDuration)
+            </td>
+            <td>
+                @Html.DisplayFor(modelcourse => course.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelcourse => course.Details)
+            </td>
+             <td>
+                <a asp-action="Edit" asp-route-id="@course.Id">Ändra</a> |
+                @* <a asp-action="Details" asp-route-id="@course.Id">Details</a> | *@
+                <a class="btn-danger" asp-action="Delete" asp-route-id="@course.Id">Ta Bort</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
