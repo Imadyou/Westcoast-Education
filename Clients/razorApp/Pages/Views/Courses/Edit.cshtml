@@ -1,22 +1,19 @@
-@page
-@model razorApp.Pages.Views.Courses.Create
+@page "{id:int}"
+@model razorApp.Pages.Views.Courses.Edit
 @{
-    ViewData["Title"] = "Lägg Till";
+    ViewData["Title"] = "Redigera";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<h2 class="shadow p-3 mb-5 bg-white rounded">Lägg till ny Kurs</h2>
+<h2 class="shadow p-3 mb-5 bg-white rounded">Redigera kurs </h2>
+
 <hr />
 <div class="row">
     <div  class="col-md-5, shadow p-3 mb-5 bg-white rounded">
         <form method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-            <div class="form-group">
-                <label asp-for="Course.CourseId" class="control-label"></label>
-                <input asp-for="Course.CourseId" class="form-control" />
-                <span asp-validation-for="Course.CourseId" class="text-danger"></span>
-            </div>
+           
             <div class="form-group">
                 <label asp-for="Course.CourseTitle" class="control-label"></label>
                 <input asp-for="Course.CourseTitle" class="form-control" />
@@ -42,14 +39,12 @@
                <textarea asp-for="Course.Details"  class="form-control" id="exampleFormControlTextarea4" rows="3" ></textarea>
                 <span asp-validation-for="Course.CourseTitle" class="text-danger"></span>
             </div>
-            <div class="form-group">
-                <input type="submit" value="Skapa" class="btn btn-primary" />
+               <div class="form-group">
+                <input type="submit" @*method="OnPostAsync" asp-route-id="id" *@ value="Save" class="btn btn-primary" />
             </div>
-            
             </form>
     </div>
 </div>
-
 <div>
     <a asp-page="Index">Tillbaka till kurslistan</a>
 </div>

@@ -57,9 +57,8 @@
                 @Html.DisplayFor(modelcourse => course.Details)
             </td>
              <td>
-                <a asp-action="Edit" asp-route-id="@course.Id">Ändra</a> |
-                @* <a asp-action="Details" asp-route-id="@course.Id">Details</a> | *@
-                <a class="btn-danger" asp-action="Delete" asp-route-id="@course.Id">Ta Bort</a>
+                <a asp-Page="Edit" asp-route-id="@course.Id">Ändra</a> |
+                <a class="btn-danger" asp-Page="Index" onclisk="return confirm('Är du säkert att du vill ta bort kursen?');" asp-page-handler="Delete" asp-route-id="@course.Id">Ta Bort</a>
             </td>
         </tr>
 }

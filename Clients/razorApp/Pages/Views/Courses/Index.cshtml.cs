@@ -24,10 +24,23 @@ namespace razorApp.Pages.Views.Courses
 
         public async Task OnGetAsync()
         {
-            var baseUrl = _config.GetValue<string>("baseUrl");
+            try
+            {
+                    var baseUrl = _config.GetValue<string>("baseUrl");
             var url = $"{baseUrl}/Courses/fullList";
             using var http=new HttpClient();
-             Courses= await http.GetFromJsonAsync<List<CourseViewModel>>(url);
+             Courses= await http.GetFromJsonAsync<List<CourseViewModel?>>(url);
+             if(Courses is null){
+                Console.WriteLine("Kurs listan är tom!");
+             }
+            }
+            catch (Exception)
+            {
+                
+                throw new Exception("Något gick fel när vi skulle lista kurser!");
+            }
+        
+
         }
     }
 }
