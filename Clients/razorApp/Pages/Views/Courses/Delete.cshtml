@@ -1,0 +1,13 @@
+@page
+@model razorApp.Pages.Views.Courses.Delete
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<div>
+    <button> 
+      <a onclick="return confirm('Är du säkert att du vill ta bort kursen?');>Delete</a>
+    </button>
+</div>

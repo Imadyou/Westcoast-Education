@@ -42,5 +42,17 @@ namespace razorApp.Pages.Views.Courses
         
 
         }
+        public async Task<ActionResult> OnGetDelete(int id)
+        { using var http=new HttpClient();
+            var baseUrl = _config.GetValue<string>("baseUrl");
+            var url = $"{baseUrl}/Courses/delete/{id}";
+            var response = await http.DeleteAsync(url);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("något gick fel vi Kunde inte Ta bort kursen!");
+            }
+            return RedirectToPage("Index");
+            
+        }
     }
 }

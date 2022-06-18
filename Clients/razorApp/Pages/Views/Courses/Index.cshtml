@@ -58,7 +58,7 @@
             </td>
              <td>
                 <a asp-Page="Edit" asp-route-id="@course.Id">Ändra</a> |
-                <a class="btn-danger" asp-Page="Index" onclisk="return confirm('Är du säkert att du vill ta bort kursen?');" asp-page-handler="Delete" asp-route-id="@course.Id">Ta Bort</a>
+                <a class="btn-danger" asp-page="Index" onclick="return confirm('Är du säkert att du vill ta bort kursen?');" asp-page-handler="Delete" asp-route-id="@course.Id"  >Ta Bort </a> 
             </td>
         </tr>
 }

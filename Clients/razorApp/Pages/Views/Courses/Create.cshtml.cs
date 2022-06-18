@@ -22,7 +22,7 @@ namespace razorApp.Pages.Views.Courses
             _logger = logger;
         }
 
-        public async Task OnPostAsync()
+        public async Task<ActionResult> OnPostAsync()
         {
             using var http=new HttpClient();
             var baseUrl = _config.GetValue<string>("baseUrl");
@@ -32,6 +32,8 @@ namespace razorApp.Pages.Views.Courses
             {
                 throw new Exception("något gick fel vi Kunde inte spara kursen!");
             }
+               
+            return RedirectToPage("Create");
 
         }
     }
