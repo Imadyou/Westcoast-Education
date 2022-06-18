@@ -28,6 +28,7 @@ namespace WestcoastEducation_API.Helpers
          .ForMember(dest=>dest.CategoryId, Options => Options.MapFrom(Src=> Src.Id));
        
         CreateMap<PostStudentViewModel, Student>();
+        CreateMap<Student,StudentWithIdViewModel>().ForMember(dest=>dest.Name,options=>options.MapFrom(src=>string.Concat(src.FirstName," ", src.LastName)));
         CreateMap<Student, StudentViewModel>().ForMember(dest=>dest.Name,options=>options.MapFrom(src=>string.Concat(src.FirstName," ", src.LastName)));
 
   

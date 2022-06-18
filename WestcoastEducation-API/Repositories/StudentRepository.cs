@@ -40,9 +40,9 @@ namespace WestcoastEducation_API.Repositories
        
     }
 
-    public async Task<List<StudentViewModel>> ListStudentsAsync()
+    public async Task<List<StudentWithIdViewModel>> ListStudentsAsync()
     {
-         return await _context.Students.ProjectTo<StudentViewModel>(_mapper.ConfigurationProvider).ToListAsync();
+         return await _context.Students.ProjectTo<StudentWithIdViewModel>(_mapper.ConfigurationProvider).ToListAsync();
          
     }
     public async Task UpdateStudentAsync(int id, PostStudentViewModel model)
