@@ -1,12 +1,10 @@
 @page
 @model razorApp.Pages.Views.Courses.Index
 @{
-    ViewData["Title"] = "Redigera Kurser";
+    ViewData["Title"] = "Vår Kurser";
 }
 
-<h1>@ViewData["Title"]</h1>
-
-<h3> Vår Kurser</h3>
+<h2>@ViewData["Title"]</h2>
 
 <p>
     <a asp-page="/Views/Courses/Create">Lägg till</a>
@@ -36,7 +34,7 @@
         </tr>
     </thead>
     <tbody>
-@foreach (var course in Model.Courses) {
+@foreach (var course in Model.Courses!) {
         <tr>
             <td>
                 @Html.DisplayFor(modelItem => course.Id)

@@ -32,6 +32,7 @@ namespace razorApp.Pages.Views.Courses
             {
                 throw new Exception("något gick fel vi Kunde inte spara kursen!");
             }
+            RedirectToPage("Edit");
         }
 
     }
