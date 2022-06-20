@@ -35,16 +35,20 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcQ291cnNlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Courses/Delete.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcQ291cnNlc1xEZWxldGUuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Courses/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcQ291cnNlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Courses/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcQ291cnNlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Students/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcU3R1ZGVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Students/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcU3R1ZGVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Students/Index.cshtml]

@@ -1,12 +1,12 @@
 @page
 @model razorApp.Pages.Views.Courses.Create
 @{
-    ViewData["Title"] = "Lägg Till";
+    ViewData["Title"] = "Lägg till ny kurs";
 }
 
-<h1>@ViewData["Title"]</h1>
+<h2 class="shadow p-3 mb-5 bg-white rounded">@ViewData["Title"]</h2>
 
-<h2 class="shadow p-3 mb-5 bg-white rounded">Lägg till ny Kurs</h2>
+
 <hr />
 <div class="row">
     <div  class="col-md-5, shadow p-3 mb-5 bg-white rounded">
@@ -43,7 +43,7 @@
                 <span asp-validation-for="Course.CourseTitle" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <input type="submit" value="Lägg till" class="btn btn-primary"/>
+                <input type="submit" value="Spara" class="btn btn-primary"/>
             </div>
             
             </form>
@@ -51,7 +51,7 @@
 </div>
 
 <div>
-    <a asp-page="Index">Tillbaka till kurslistan</a>
+    <a class="btn btn-primary" asp-page="Index">Tillbaka till kurslistan</a>
 </div>
 
 @section Scripts {

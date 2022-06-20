@@ -29,5 +29,17 @@ namespace razorApp.Pages.Views.Students
             using var http=new HttpClient();
               Students= await http.GetFromJsonAsync<List<StudentViewModel>>(url);
         }
+         public async Task<ActionResult> OnGetDelete(int id)
+        { using var http=new HttpClient();
+            var baseUrl = _config.GetValue<string>("baseUrl");
+            var url = $"{baseUrl}/students/{id}";
+            var response = await http.DeleteAsync(url);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Något gick fel vi Kunde inte Ta bort Eleven!");
+            }
+            return RedirectToPage("Index");
+            
+        }
     }
 }

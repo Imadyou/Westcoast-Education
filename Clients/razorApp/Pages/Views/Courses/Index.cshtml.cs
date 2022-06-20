@@ -49,7 +49,7 @@ namespace razorApp.Pages.Views.Courses
             var response = await http.DeleteAsync(url);
             if (!response.IsSuccessStatusCode)
             {
-                throw new Exception("något gick fel vi Kunde inte Ta bort kursen!");
+                throw new Exception("Något gick fel vi Kunde inte Ta bort kursen!");
             }
             return RedirectToPage("Index");
             

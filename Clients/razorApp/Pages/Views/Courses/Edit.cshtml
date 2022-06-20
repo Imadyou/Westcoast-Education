@@ -1,12 +1,12 @@
 @page "{id:int}"
 @model razorApp.Pages.Views.Courses.Edit
 @{
-    ViewData["Title"] = "Redigera";
+    ViewData["Title"] = "Redigera kurs";
 }
 
 <h1>@ViewData["Title"]</h1>
 
-<h2 class="shadow p-3 mb-5 bg-white rounded">Redigera kurs </h2>
+
 
 <hr />
 <div class="row">
@@ -40,13 +40,13 @@
                 <span asp-validation-for="Course.CourseTitle" class="text-danger"></span>
             </div>
                <div class="form-group">
-                <input type="submit" value="Save" class="btn btn-primary" />
+                <input type="submit" value="Spara" class="btn btn-primary" />
             </div>
             </form>
     </div>
 </div>
 <div>
-    <a asp-page="Index">Tillbaka till kurslistan</a>
+    <a class="btn btn-primary"asp-page="Index">Tillbaka till kurslistan</a>
 </div>
 
 @section Scripts {

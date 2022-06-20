@@ -7,10 +7,10 @@
 <h2>@ViewData["Title"]</h2>
 
 <p>
-    <a asp-page="/Views/Courses/Create">Lägg till</a>
+    <a class="btn btn-primary" asp-page="/Views/Courses/Create">Lägg till</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-bordered ">
+    <thead class="thead-dark" >
         <tr>
             <th>
                Kurs nummer
@@ -55,8 +55,8 @@
                 @Html.DisplayFor(modelcourse => course.Details)
             </td>
              <td>
-                <a asp-Page="Edit" asp-route-id="@course.Id">Ändra</a> |
-                <a class="btn-danger" asp-page="Index" onclick="return confirm('Är du säkert att du vill ta bort kursen?');" asp-page-handler="Delete" asp-route-id="@course.Id"  >Ta Bort </a> 
+                <a class="btn btn-primary" asp-Page="Edit" asp-route-id="@course.Id"> Ändra</a> |
+                <a class="btn btn-danger" asp-page="Index" onclick="return confirm('Är du säkert att du vill ta bort kursen?');" asp-page-handler="Delete" asp-route-id="@course.Id"  >Ta Bort </a> 
             </td>
         </tr>
 }

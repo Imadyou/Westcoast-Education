@@ -1,0 +1,54 @@
+@page
+@model razorApp.Pages.Views.Students.Create
+@{
+    ViewData["Title"] = "Lägg till Ny Elev";
+}
+
+<h2 class="shadow p-3 mb-5 bg-white rounded">@ViewData["Title"]</h2>
+
+
+<hr />
+<div class="row">
+    <div  class="col-md-5, shadow p-3 mb-5 bg-white rounded">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Student.FirstName" class="control-label"></label>
+                <input asp-for="Student.FirstName" class="form-control" />
+                <span asp-validation-for="Student.FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.LastName" class="control-label"></label>
+                <input asp-for="Student.LastName" class="form-control" />
+                <span asp-validation-for="Student.LastName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.Email" class="control-label"></label>
+                <input asp-for="Student.Email" class="form-control" />
+                <span asp-validation-for="Student.Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.PhoneNumber" class="control-label"></label>
+                <input asp-for="Student.PhoneNumber" class="form-control" />
+                <span asp-validation-for="Student.PhoneNumber!" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Student.Address" class="control-label"></label>
+                <input asp-for="Student.Address" class="form-control" />
+                <span asp-validation-for="Student.Address" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Lägg till" class="btn btn-primary"/>
+            </div>
+            
+            </form>
+    </div>
+</div>
+
+<div>
+    <a class="btn btn-primary active" asp-page="Index">Tillbaka till Elevernas listan</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
