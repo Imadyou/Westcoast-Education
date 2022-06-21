@@ -1,0 +1,63 @@
+@page
+@model razorApp.Pages.Views.Teachers.Index
+@{
+    ViewData["Title"] = "Lärarna";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>
+    <a class="btn btn-primary" asp-page="/Views/Teachers/Create">Lägg till</a>
+</p>
+<table class="table table-bordered ">
+    <thead>
+        <tr>
+            <th>
+               Namn 
+            </th>
+            <th>
+               E-post
+            </th>
+            <th>
+              Telefonnummer
+            </th>
+            <th>
+              Adress
+            </th>
+            <th>     
+             Kompetenser
+            </th>         
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var teacher in Model.Teachers!) {
+        <tr>
+            
+            <td>
+                @Html.DisplayFor(modelteacher => teacher.Name)
+            </td>
+            <td>
+                @Html.DisplayFor(modelteachers  => teacher .Email)
+            </td>
+            <td>
+               0046-@Html.DisplayFor(modelteacher  => teacher .PhoneNumber)
+            </td>
+            <td>
+                @Html.DisplayFor(modelteacher  => teacher .Address)
+            </td>
+            <td>
+                @foreach (var item in teacher.Skills!)
+                {
+                    @item <br>  
+                }                     
+                                
+            </td>
+
+             <td>
+                <a class="btn btn-primary" asp-Page="Edit" asp-route-data="@teacher.Email">Ändra</a> |
+                <a class="btn btn-danger" asp-page="Index" onclick="return confirm('Är du säkert att du vill ta bort eleven?');" asp-page-handler="Delete" asp-route-techerEmail="@teacher.Email">Ta Bort </a> 
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
