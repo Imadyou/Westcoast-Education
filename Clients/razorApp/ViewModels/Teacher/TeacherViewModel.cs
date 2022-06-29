@@ -7,7 +7,8 @@ using System.Threading.Tasks;
 namespace razorApp.ViewModels.Teacher
 {
     public class TeacherViewModel
-    {
+    {    [Display(Name="Id")]
+        public int Id { get; set; }
         [Display(Name="Namn")]
          public string? Name { get; set; }
          [Display(Name="E-post")]

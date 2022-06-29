@@ -13,7 +13,7 @@ namespace razorApp.ViewModels.Students
         [Display(Name="Efternamn")]
         public string? LastName { get; set; }
         [Display(Name="E-Post")]
-        public string Email { get; set; }
+        public string? Email { get; set; }
          [Display(Name="Telefonnummer")]
         public int PhoneNumber { get; set; }
         [Display(Name="Adress")]

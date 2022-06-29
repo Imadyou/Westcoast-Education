@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using Microsoft.Extensions.Logging;
 using razorApp.ViewModels.Students;
+using razorApp.ViewModels.Teacher;
 
 namespace razorApp.Pages.Views.Students
 {
@@ -15,6 +16,8 @@ namespace razorApp.Pages.Views.Students
     private readonly IConfiguration _config;
     [BindProperty]
     public PostStudentViewModel Student { get; set; }=new PostStudentViewModel();
+        
+   
         public Create(ILogger<Create> logger, IConfiguration config)
         {
             _config = config;
@@ -32,6 +35,7 @@ namespace razorApp.Pages.Views.Students
             }
             return RedirectToPage("Create");
         }
+      
     }
 }
  

@@ -1,8 +1,10 @@
+
 @page
 @model razorApp.Pages.Views.Teachers.Index
 @{
     ViewData["Title"] = "Lärarna";
 }
+
 
 <h1>@ViewData["Title"]</h1>
 
@@ -12,6 +14,7 @@
 <table class="table table-bordered ">
     <thead>
         <tr>
+            <th hidden>Id</th>
             <th>
                Namn 
             </th>
@@ -32,7 +35,9 @@
     <tbody>
 @foreach (var teacher in Model.Teachers!) {
         <tr>
-            
+            <td hidden>
+                 @Html.DisplayFor(modelteacher => teacher.Id)
+            </td>
             <td>
                 @Html.DisplayFor(modelteacher => teacher.Name)
             </td>
@@ -54,8 +59,8 @@
             </td>
 
              <td>
-                <a class="btn btn-primary" asp-Page="Edit" asp-route-data="@teacher.Email">Ändra</a> |
-                <a class="btn btn-danger" asp-page="Index" onclick="return confirm('Är du säkert att du vill ta bort eleven?');" asp-page-handler="Delete" asp-route-techerEmail="@teacher.Email">Ta Bort </a> 
+                <a class="btn btn-primary" asp-Page="Edit" asp-route-id="@teacher.Id">Ändra</a> |
+                <a class="btn btn-danger" asp-page="Index" onclick="return confirm('Är du säkert att du vill ta bort eleven?');" asp-page-handler="Delete" asp-route-id="@teacher.Id">Ta Bort </a> 
             </td>
         </tr>
 }

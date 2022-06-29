@@ -12,7 +12,7 @@
 <table class="table table-bordered ">
     <thead>
         <tr>
-            <th>
+            <th hidden>
                StudentId 
             </th>
             <th>
@@ -34,7 +34,7 @@
 @foreach (var student in Model.Students!) {
         <tr>
             
-            <td>
+            <td hidden>
                 @Html.DisplayFor(modelstudent => student.Id)
             </td>
             <td>

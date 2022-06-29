@@ -1,11 +1,10 @@
-@page
-@model razorApp.Pages.Views.Teachers.Create
+@page "{id:int}"
+@model razorApp.Pages.Views.Teachers.Edit
 @{
-    ViewData["Title"] = "Lägg till en ny lärara";
+    ViewData["Title"] = "Redigera";
 }
 
-<h2 class="shadow p-3 mb-5 bg-white rounded">@ViewData["Title"]</h2>
-
+<h2>@ViewData["Title"]</h2>
 
 <hr />
 <div class="row">
@@ -37,7 +36,7 @@
                 <input asp-for="Teacher.Address" class="form-control" />
                 <span asp-validation-for="Teacher.Address" class="text-danger"></span>
             </div>
-              <div class="form-group" >
+                <div class="form-group" >
             
                 <label for="Teacher.Skill" class="control-label"></label>
                   
@@ -46,24 +45,21 @@
                 {
                  <input class="Input-group" type="checkbox" aria-label="Checkbox for text input" name="Teacher.Skill" value="@item.Name">@item.Name
                 }
-        
-          
                 
                 <span asp-validation-for="Teacher.Skill" class="text-danger"></span>
             </div>
-           
             <div class="form-group">
-                <input type="submit" value="Lägg till" class="btn btn-primary"/>
+                <input type="submit" value="Spara" class="btn btn-primary"/>
             </div>
             
             </form>
     </div>
 </div>
-
 <div>
-    <a class="btn btn-primary active" asp-page="Index">Tillbaka till lärarnas listan</a>
+    <a class="btn btn-primary" asp-page="Index">Tillbaka till lärarnas lista</a>
 </div>
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
 }
+

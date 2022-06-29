@@ -32,5 +32,17 @@ namespace razorApp.Pages.Views.Teachers
            Teachers= await http.GetFromJsonAsync<List<TeacherViewModel>>(url);
      
         }
+          public async Task<ActionResult> OnGetDelete(int id)
+        { using var http=new HttpClient();
+            var baseUrl = _config.GetValue<string>("baseUrl");
+            var url = $"{baseUrl}/Teachers/{id}";
+            var response = await http.DeleteAsync(url);
+            if (!response.IsSuccessStatusCode)
+            {
+                throw new Exception("Något gick fel vi Kunde inte Ta bort läraren!");
+            }
+            return RedirectToPage("Index");
+            
+        }
     }
 }

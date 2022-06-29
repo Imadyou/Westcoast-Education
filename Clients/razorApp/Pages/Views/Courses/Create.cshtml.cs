@@ -14,7 +14,7 @@ namespace razorApp.Pages.Views.Courses
         private readonly ILogger<Create> _logger;
         private readonly IConfiguration _config;
         [BindProperty]
-        public CreateCourseViewModel? Course { get; set; }
+        public CreateCourseViewModel Course { get; set; }=new CreateCourseViewModel();
 
         public Create(ILogger<Create> logger, IConfiguration config)
         {
