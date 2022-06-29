@@ -7,7 +7,7 @@ namespace WestcoastEducation_API.ViewModels.Teachers
 {
     public class PostTeacherViewModel
     {
-        //  public int Id { get; set; }
+     
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Email { get; set; }

@@ -81,7 +81,7 @@ namespace WestcoastEducation_API.Controllers
           if(  await _repo.SaveAllAsync()){
           return StatusCode(201);
           }
-          return StatusCode (500, "Det gick inte att spara eleves information!" );
+          return StatusCode (500, "Det gick inte att spara elevens information!" );
          
         
       }
@@ -103,7 +103,7 @@ namespace WestcoastEducation_API.Controllers
     if(await _repo.SaveAllAsync()){
       return NoContent();
     }
-    return StatusCode(500, " Ett fel inträgffade när elevs information skulle ändras..!" );
+    return StatusCode(500, " Ett fel inträgffade när elevens information skulle ändras..!" );
   }
   catch (Exception ex)
   {
@@ -121,7 +121,7 @@ namespace WestcoastEducation_API.Controllers
   {
    return NoContent();
   }
-  return StatusCode(500, ("Nogåt gick fel när vi skulle radera studnetens informaion..!"));
+  return StatusCode(500, ("Nogåt gick fel när vi skulle radera Elevens informaion..!"));
 }
     }
 }

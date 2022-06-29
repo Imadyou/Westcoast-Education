@@ -88,6 +88,7 @@ namespace WestcoastEducation_API.Repositories
         }
     
      var teacherToView=new TeacherViewModel();
+       teacherToView.Id=teacher.Id;
        teacherToView.Name= teacher.FirstName+" "+teacher.LastName;
        teacherToView.Email=teacher.Email;
        teacherToView.Address=teacher.Address;
@@ -99,7 +100,7 @@ namespace WestcoastEducation_API.Repositories
 
        teachersWithSkills.Add(teacherToView);
         }
-   return teachersWithSkills;
+       return teachersWithSkills;
       
     }
 
@@ -137,7 +138,7 @@ namespace WestcoastEducation_API.Repositories
     {
       var teacher= await _context.Teachers.Include(t=>t.Skills).Where(t=>t.Id==id).SingleOrDefaultAsync();
        if(teacher is null){
-         throw new Exception($"Vi kunde inte hitta läraren med id: {id}!");}
+      throw new Exception($"Vi kunde inte hitta läraren med id: {id}!");}
        List<string> competencies= new List<string>();
        foreach(var skill in teacher.Skills)
        {

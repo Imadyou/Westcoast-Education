@@ -24,8 +24,12 @@ namespace WestcoastEducation_API.Repositories
     }
 
     public async Task AddStudentAsync(PostStudentViewModel model)
-    {
-         var NewStudent= _mapper.Map<Student>(model);
+    {    
+       var check =await _context.Students.Where(s=>s.Email!.ToLower()==model.Email!.ToLower()).SingleOrDefaultAsync();
+        if(check is not null){
+          throw new Exception ($" Det finns readan en eleve som har Majlet {check.Email}!");
+        }
+     var NewStudent= _mapper.Map<Student>(model);
      await _context.Students.AddAsync(NewStudent);
     }
 
@@ -48,13 +52,9 @@ namespace WestcoastEducation_API.Repositories
     public async Task UpdateStudentAsync(int id, PostStudentViewModel model)
     {
         var student= await _context.Students.FindAsync(id);
-       if(student is null){ throw new Exception($"Vi kunde inte hitta student med id: {id}!");}
-        var check =await _context.Students.Where(s=>s.Email!.ToLower()==model.Email!.ToLower()).SingleOrDefaultAsync();
-        if(check is not null){
-          throw new Exception ($" Det finns readan en eleve som har Majlet {check.Email}!");
-        }else
-        {student.FirstName = model.FirstName;}
-        
+       if(student is null){ throw new Exception($"Vi kunde inte hitta eleven med id: {id}!");}
+   
+        student.FirstName = model.FirstName; 
         student.LastName=model.LastName;
         student.Email=model.Email;
         student.PhoneNumber=model.PhoneNumber;
