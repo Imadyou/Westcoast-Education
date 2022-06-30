@@ -104,6 +104,7 @@ namespace WestcoastEducation_API.Repositories
       
     }
 
+
     public async Task UpdateTeacherAsync(int id, PostTeacherViewModel model)
     {
            var teacher= await _context.Teachers.Include(t=>t.Skills).FirstOrDefaultAsync(t=>t.Id==id);

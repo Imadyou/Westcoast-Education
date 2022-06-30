@@ -1,5 +1,5 @@
 
-@page
+@page 
 @model razorApp.Pages.Views.Teachers.Index
 @{
     ViewData["Title"] = "Lärarna";
@@ -7,6 +7,12 @@
 
 
 <h1>@ViewData["Title"]</h1>
+<form>
+    <p>
+       Sök efter kompetenser: <input type="text" asp-for="TeachersCategory" />
+        <input type="submit" value="Sök" />
+    </p>
+</form>
 
 <p>
     <a class="btn btn-primary" asp-page="/Views/Teachers/Create">Lägg till</a>
