@@ -1,0 +1,86 @@
+[{
+
+        "FirstName": "Lennart",
+        "LastName": "Lindqvist",
+        "Email": "Lennart@Westcoast.se",
+        "PhoneNumber": 761154665,
+        "Address": "Storgatan 6 A, 13274 Huvudstaden",
+        "skills": [
+            "JavaScript",
+            "Swift",
+            "Ruby"
+        ]
+    },
+    {
+
+        "FirstName": "Cecilia",
+        "LastName": "Oskarsson",
+        "Email": "Cecilia@Westcoast.se",
+        "PhoneNumber": 721056583,
+        "Address": "Tomtbergavägen 66  D, 12254 Huvudstaden",
+        "skills": [
+            "Java",
+            "HTML",
+            "Swift"
+        ]
+    },
+    {
+
+        "FirstName": "Bengt",
+        "LastName": "Larsson",
+        "Email": "Bengt@Westcoast.se",
+        "PhoneNumber": 723356582,
+        "Address": "Bredvägen 9, 11154 staden",
+        "skills": [
+            "PHP",
+            "TypeScript"
+        ]
+    },
+    {
+
+        "FirstName": "Adam",
+        "LastName": "Ramzi",
+        "Email": "Adam.ramzi@iths.se",
+        "PhoneNumber": 762833430,
+        "Address": "kulvägen 65",
+        "skills": [
+            "C#"
+        ]
+    },
+    {
+
+        "FirstName": "Tom",
+        "LastName": "Lennartsson",
+        "Email": "tom@Westcoast.se",
+        "PhoneNumber": 723333382,
+        "Address": "Bästavägen 4B, 11154 staden",
+        "skills": [
+            "Java",
+            "C#"
+        ]
+    },
+    {
+
+        "FirstName": "totot",
+        "LastName": "rterrtert",
+        "Email": "sssss@juy.com",
+        "PhoneNumber": 78548558,
+        "Address": "qwerty",
+        "skills": [
+            "Java"
+        ]
+    },
+    {
+
+        "FirstName": "Juan",
+        "LastName": "Ramos",
+        "Email": "Juan.r@west.com",
+        "PhoneNumber": 769895421,
+        "Address": "noAddress 65, city",
+        "skills": [
+            ".Net",
+            "Java",
+            "C#"
+        ]
+    }
+]

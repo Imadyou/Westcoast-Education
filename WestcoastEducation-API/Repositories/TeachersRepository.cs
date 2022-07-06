@@ -34,7 +34,7 @@ namespace WestcoastEducation_API.Repositories
          NewTeacher.PhoneNumber=model.PhoneNumber;
 
          List<Category> skills=new List<Category>();
-         foreach(var skill in model.skill!)
+         foreach(var skill in model.Skills!)
          {
            var competency= await _context.Categories.Where(c=>c.Name==skill).SingleOrDefaultAsync();
            if(competency is null)
@@ -117,7 +117,7 @@ namespace WestcoastEducation_API.Repositories
         teacher.Address=model.Address;
         
          List<Category> skills=new List<Category>();
-         foreach(var skill in model.skill!)
+         foreach(var skill in model.Skills!)
          {
            var competency= await _context.Categories.Where(c=>c.Name.ToLower()==skill.ToLower()).SingleOrDefaultAsync();
            if(competency is null)

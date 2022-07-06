@@ -4,16 +4,18 @@ using WestcoastEducation_API.Models;
 
 namespace WestcoastEducation_API.Data
 {
-  public class CourseContext : IdentityDbContext
+  public class CourseContext : DbContext
   {
-    public CourseContext(DbContextOptions options) : base(options) { }
+    public CourseContext(DbContextOptions options) : base(options) { 
+        }
 
     public DbSet<Course> Courses => Set<Course>();
-    public DbSet<Student> Students => Set<Student>();
+     public DbSet<Student> Students => Set<Student>();
     public DbSet<Teacher> Teachers => Set<Teacher>();
     public DbSet<Category> Categories => Set<Category>();
     protected override void OnModelCreating(ModelBuilder builder)
     {
+      base.OnModelCreating(builder);
 
       builder.Entity<Student>()
       .HasMany(a => a.Courses)
@@ -30,7 +32,6 @@ namespace WestcoastEducation_API.Data
       .WithMany(c=>c.Teachers)
       .UsingEntity(join=>join.ToTable("TeachersCourses"));
 
-      base.OnModelCreating(builder);
     }
   }
 }

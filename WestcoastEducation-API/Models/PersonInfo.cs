@@ -3,10 +3,11 @@ using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Identity;
 
 namespace WestcoastEducation_API.Models
 {
-    public class PersonInfo
+    public class PersonInfo 
     {
          [Key]
         public int Id { get; set; }

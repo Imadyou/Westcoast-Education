@@ -8,49 +8,49 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = MvcApp
 build_property.RootNamespace = MvcApp
-build_property.ProjectDir = C:\Code\WbbutvecklingKurs2\Westcoast-Education\Clients\MvcApp\
+build_property.ProjectDir = c:\Code\WbbutvecklingKurs2\Westcoast-Education\Clients\MvcApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Code\WbbutvecklingKurs2\Westcoast-Education\Clients\MvcApp
+build_property.MSBuildProjectDirectory = c:\Code\WbbutvecklingKurs2\Westcoast-Education\Clients\MvcApp
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Categories/Index.cshtml]
+[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Categories/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2F0ZWdvcmllc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Courses/Details.cshtml]
+[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Courses/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Courses/Index.cshtml]
+[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Courses/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291cnNlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Home/Index.cshtml]
+[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Home/Privacy.cshtml]
+[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Shared/Error.cshtml]
+[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Shared/_ValidationScriptsPartial.cshtml]
+[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/_ViewImports.cshtml]
+[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/_ViewStart.cshtml]
+[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Shared/_Layout.cshtml]
+[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/MvcApp/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-zeo36l645o

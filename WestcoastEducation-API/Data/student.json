@@ -1,0 +1,105 @@
+[{
+
+        "FirstName": "Astrid",
+        "LastName": "Borg",
+        "Email": "Astrid@mail.se",
+        "PhoneNumber": 768455884,
+        "Address": "Gamalagatan 5, 25484 Staden"
+    },
+    {
+
+        "FirstName": "Simon",
+        "LastName": "Gustavsson",
+        "Email": "Simon@iths.se",
+        "PhoneNumber": 791116454,
+        "Address": "NyGatan 9A, 112 54 Stockholm"
+    },
+    {
+
+        "FirstName": "Max",
+        "LastName": " Fredrikson",
+        "Email": "Max@mail.se",
+        "PhoneNumber": 768455884,
+        "Address": "Gamalagatan 5, 25484 Staden"
+    },
+    {
+
+        "FirstName": "Jonathan",
+        "LastName": "Rikard",
+        "Email": "Jonthan@mail.se",
+        "PhoneNumber": 768455884,
+        "Address": "Bästagatan 9, 16554 Staden"
+    },
+    {
+
+        "FirstName": "Erik",
+        "LastName": "Nilsson",
+        "Email": "Erik@mail.se",
+        "PhoneNumber": 768455884,
+        "Address": "Tomvägen 34 A, 55658 Huvudstad"
+    },
+    {
+
+        "FirstName": "Anna",
+        "LastName": "Karlsson",
+        "Email": "Anna@mail.se",
+        "PhoneNumber": 768455884,
+        "Address": "Linvägen 38 A, 44141 Huvudstad"
+    },
+    {
+
+        "FirstName": "Maria",
+        "LastName": "Forsberg",
+        "Email": "Maria.F@mail.se",
+        "PhoneNumber": 763255984,
+        "Address": "Norrgatan 18 b, 11141 LillaStaden"
+    },
+    {
+
+        "FirstName": "Henrik",
+        "LastName": "Olofsson",
+        "Email": "Henrik.Olf@mail.se",
+        "PhoneNumber": 724525398,
+        "Address": "ÖsterVägen 77, 11141 Staden"
+    },
+    {
+
+        "FirstName": "Thomas",
+        "LastName": "Holm",
+        "Email": "Thomas@mail.se",
+        "PhoneNumber": 724525333,
+        "Address": "BästaVägen 7, 12141 HuvudStad"
+    },
+    {
+
+        "FirstName": "Peter",
+        "LastName": "Nilsson",
+        "Email": "Peter@mail.se",
+        "PhoneNumber": 72454533,
+        "Address": "LavendelVägen 7, 16641 Stad"
+    },
+    {
+
+        "FirstName": "Sara",
+        "LastName": "Jansson",
+        "Email": "Sara@mail.se",
+        "PhoneNumber": 764121533,
+        "Address": "NånVäg 8 D, 13561 StorStad"
+    },
+    {
+
+        "FirstName": "Imad",
+        "LastName": "Yousef",
+        "Email": "imad@mail.se",
+        "PhoneNumber": 764121533,
+        "Address": "NånVäg 8 D, 13561 StorStad"
+    },
+    {
+
+        "FirstName": "test ",
+        "LastName": "Test",
+        "Email": "test@iths.se",
+        "PhoneNumber": 77777454,
+        "Address": "NyGatan 9A, 112 54 Stockholm"
+    }
+]

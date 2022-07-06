@@ -1,80 +1,50 @@
 [{
-        "CategoryId": 1,
         "Name": ".Net"
     },
     {
-        "CategoryId": 2,
-
         "Name": "Java"
     },
     {
-        "CategoryId": 3,
-
         "Name": "C#"
     },
     {
-        "CategoryId": 4,
-
         "Name": "Python"
     },
     {
-        "CategoryId": 5,
-
         "Name": "HTML"
     },
     {
-        "CategoryId": 6,
-
         "Name": "JavaScript"
     },
     {
-        "CategoryId": 7,
-
         "Name": "CSS"
     },
     {
-        "CategoryId": 8,
 
         "Name": "SQL"
     },
     {
-        "CategoryId": 9,
-
         "Name": "Swift"
     },
     {
-        "CategoryId": 10,
-
         "Name": "PHP"
     },
     {
-        "CategoryId": 11,
-
         "Name": "C++"
     },
     {
-        "CategoryId": 12,
-
         "Name": "Kotlin"
     },
     {
-        "CategoryId": 13,
-
         "Name": "Ruby"
     },
     {
-        "CategoryId": 14,
-
         "Name": "TypeScript"
     },
     {
-        "CategoryId": 15,
-
         "Name": "Scala"
     },
     {
-        "CategoryId": 16,
-
         "Name": "Matlab"
     }
 

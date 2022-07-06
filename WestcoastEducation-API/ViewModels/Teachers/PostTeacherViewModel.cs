@@ -13,6 +13,6 @@ namespace WestcoastEducation_API.ViewModels.Teachers
         public string? Email { get; set; }
         public int PhoneNumber { get; set; }
         public string? Address { get; set; }
-        public List<string>?skill {get;set;}
+        public List<string>?Skills {get;set;}
     }
 }

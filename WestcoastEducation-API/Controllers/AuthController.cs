@@ -20,16 +20,16 @@ namespace Step03_ASP.NET_Identity.ViewModels
              _context = context;
             _userManager = userManager;
         }
-[HttpPost("register")]
-    public async Task<ActionResult<RegisterViewModel>> RegisterUser(RegisterViewModel model)
-    {
-      var user = new IdentityUser
-      {
-        Email = model.Email!.ToLower(),
-        PasswordHash = model.Password!.ToLower()
-      };
+// [HttpPost("register")]
+//     public async Task<ActionResult<RegisterViewModel>> RegisterUser(RegisterViewModel model)
+//     {
+//       var user = new IdentityUser
+//       {
+//         Email = model.Email!.ToLower(),
+//         PasswordHash = model.Password!.ToLower()
+//       };
 
-      var result = await _userManager.CreateAsync(user, model.Password);
+//       var result = await _userManager.CreateAsync(user, model.Password);
 
      
         // var userData = new RegisterViewModel
@@ -38,9 +38,9 @@ namespace Step03_ASP.NET_Identity.ViewModels
         //   Password= user.PasswordHash,
       
         // };
-       await _context.SaveChangesAsync();
-        return StatusCode(201, user);
-   }
+  //      await _context.SaveChangesAsync();
+  //       return StatusCode(201, user);
+  //  }
    
        
     }

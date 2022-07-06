@@ -55,19 +55,22 @@ app.UseAuthentication();
 
  app.MapControllers();
 
-using var scope = app.Services.CreateScope();
-var services = scope.ServiceProvider;
+using var scope=app.Services.CreateScope();
+var services=scope.ServiceProvider;
 try
 {
-  var context = services.GetRequiredService<CourseContext>();
-  await context.Database.MigrateAsync();
-  await LoadData.LoadCategories(context);
-  await LoadData.LoadCourses(context);
+    var context =services.GetRequiredService<CourseContext>();
+    await context.Database.MigrateAsync();
+    await LoadData.LoadCategories(context);
+    await LoadData.LoadCourses(context);
+    await LoadData.LoadStudents(context);
+    await LoadData.LoadTeachers(context);
 }
-catch (Exception ex)
+catch (Exception  ex)
 {
-  var logger = services.GetRequiredService<ILogger<Program>>();
-  logger.LogError(ex, "Ett fel inträffade när migrering utfördes");
+    
+  var logger =services.GetRequiredService<ILogger<Program>>();
+  logger.LogError(ex, "Ett fel inträffade när migrering utfördes!");
 }
 
  await app.RunAsync();

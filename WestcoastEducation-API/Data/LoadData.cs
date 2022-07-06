@@ -13,12 +13,12 @@ namespace WestcoastEducation_API.Data
     public class LoadData
     {
         public static async Task LoadCategories(CourseContext context){
-            if(await context.Categories.AnyAsync()) return;
-            var catData= await File.ReadAllTextAsync("Data/category.json");
-            var categories=JsonSerializer.Deserialize<List<CategoryViewModel>>(catData);
+            if (await context.Categories.AnyAsync()) return;
+            var catData=await File.ReadAllTextAsync("Data/category.json");
+            var categories=JsonSerializer.Deserialize<List<Category>>(catData);
             await context.AddRangeAsync(categories!);
             await context.SaveChangesAsync();
-
+           
         }
         public static async Task LoadCourses(CourseContext context){
                if(await context.Courses.AnyAsync()) return;
@@ -44,8 +44,21 @@ namespace WestcoastEducation_API.Data
 
             }
             await context.SaveChangesAsync();
-
-        }
+    }
+    public static async Task LoadStudents(CourseContext context){
+        if(await context.Students.AnyAsync())return;
+        var studentsData= await File.ReadAllTextAsync("Data/student.json");
+        var students=JsonSerializer.Deserialize<List<Student>>(studentsData);
+        await context.AddRangeAsync(students!);
+        await context.SaveChangesAsync();
 
     }
-}
+      public static async Task LoadTeachers(CourseContext context){
+        if(await context.Teachers.AnyAsync())return;
+        var teachersData= await File.ReadAllTextAsync("Data/teacher.json");
+        var teachers=JsonSerializer.Deserialize<List<Teacher>>(teachersData);
+        await context.AddRangeAsync(teachers!);
+        await context.SaveChangesAsync();
+
+    }
+}}
