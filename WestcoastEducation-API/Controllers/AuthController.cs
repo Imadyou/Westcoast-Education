@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.IdentityModel.Tokens;
 using WestcoastEducation_API.Data;
 using WestcoastEducation_API.Models;
+using WestcoastEducation_API.ViewModels.AuthViewModel;
 
 namespace Step03_ASP.NET_Identity.ViewModels
 {
@@ -14,33 +15,31 @@ namespace Step03_ASP.NET_Identity.ViewModels
  public class AuthController : ControllerBase
     {
         private readonly UserManager<IdentityUser> _userManager;
+        private readonly SignInManager<IdentityUser> _signInManager;
     private readonly CourseContext _context;
-        public AuthController(UserManager<IdentityUser> userManager, CourseContext context)
+        public AuthController(UserManager<IdentityUser> userManager, SignInManager<IdentityUser> signInManager, CourseContext context)
         {
              _context = context;
             _userManager = userManager;
+            _signInManager= signInManager;
         }
-// [HttpPost("register")]
-//     public async Task<ActionResult<RegisterViewModel>> RegisterUser(RegisterViewModel model)
-//     {
-//       var user = new IdentityUser
-//       {
-//         Email = model.Email!.ToLower(),
-//         PasswordHash = model.Password!.ToLower()
-//       };
+[HttpPost("register")]
+    public async Task<ActionResult<RegisterViewModel>> RegisterUser(RegisterViewModel model)
+    {
+      var user = new IdentityUser
+      {
+        UserName=model.Email,
+        Email = model.Email!,
+       
+      };
 
-//       var result = await _userManager.CreateAsync(user, model.Password);
-
-     
-        // var userData = new RegisterViewModel
-        // {
-        //   Email = user.Email,
-        //   Password= user.PasswordHash,
-      
-        // };
-  //      await _context.SaveChangesAsync();
-  //       return StatusCode(201, user);
-  //  }
+      var result = await _userManager.CreateAsync(user, model.Password);
+      if(!result.Succeeded){
+        throw new Exception ("Gisk inte att registrea användaren");
+      }
+   
+        return StatusCode(201, user);
+   }
    
        
     }

@@ -16,17 +16,7 @@ builder.Services.AddDbContext<CourseContext>(Options=> {
 
 });
 //Authontication 
-builder.Services.AddIdentity<IdentityUser, IdentityRole>(option =>
-{
-    option.Password.RequireDigit = true;
-    option.Password.RequireLowercase = true;
-    option.Password.RequireUppercase = true;
-    option.Password.RequireNonAlphanumeric = true;
-    option.Password.RequiredLength = 8;
-
-    option.Lockout.MaxFailedAccessAttempts = 3;
-    option.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(15);
-}).AddEntityFrameworkStores<CourseContext>();
+builder.Services.AddIdentity<IdentityUser, IdentityRole>().AddEntityFrameworkStores<CourseContext>();
 
 //Dependency injection for Interfaces and Classes
 builder.Services.AddScoped<ICourseRepository, CourseRepository>();
@@ -51,7 +41,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 app.UseAuthentication();
-// app.UseAuthorization();
+
 
  app.MapControllers();
 

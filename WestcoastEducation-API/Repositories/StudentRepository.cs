@@ -29,6 +29,8 @@ namespace WestcoastEducation_API.Repositories
         if(check is not null){
           throw new Exception ($" Det finns readan en eleve som har Majlet {check.Email}!");
         }
+         var checkPhone= await _context.Students.Where(s=>s.PhoneNumber==model.PhoneNumber).SingleOrDefaultAsync();
+          if(checkPhone is not null){ throw new Exception($"Eleven med telefonnummer: {model.PhoneNumber} Finns redan i elevlistan");}
      var NewStudent= _mapper.Map<Student>(model);
      await _context.Students.AddAsync(NewStudent);
     }

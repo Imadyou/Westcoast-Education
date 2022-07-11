@@ -18,7 +18,7 @@ namespace razorApp.Pages.Views.Teachers
     public PostTeacherViewModel Teacher { get; set; }=new 
     PostTeacherViewModel();
        [BindProperty]
-    public List<CategoryViewModel> Categories { get; set; }=new List<CategoryViewModel>();
+    public List<CategoryViewModel>? Categories { get; set; }=new List<CategoryViewModel>();
       public Create(ILogger<Create> logger, IConfiguration config)
         {
             _config = config;

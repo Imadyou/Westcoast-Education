@@ -23,13 +23,13 @@
                 <span asp-validation-for="Teacher.LastName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Teacher.Email" class="control-label"></label>
+                <label asp-for="Teacher.Email" class="control-label" ></label>
                 <input asp-for="Teacher.Email" class="form-control" />
                 <span asp-validation-for="Teacher.Email" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Teacher.PhoneNumber" class="control-label"></label>
-                <input asp-for="Teacher.PhoneNumber" class="form-control" />
+                <label asp-for="Teacher.PhoneNumber" class="control-label" ></label>
+                <input asp-for="Teacher.PhoneNumber" placeholder="12-345-56-78" pattern="[0-9]{2}-[0-9]{3}-[0-9]{2}-[0-9]{2}" class="form-control"  />
                 <span asp-validation-for="Teacher.PhoneNumber!" class="text-danger"></span>
             </div>
             <div class="form-group">
@@ -42,14 +42,14 @@
                 <label for="Teacher.Skill" class="control-label"></label>
                   
            
-                @foreach (var item in Model.Categories)
+                @foreach (var item in Model.Categories!)
                 {
-                 <input class="Input-group" type="checkbox" aria-label="Checkbox for text input" name="Teacher.Skill" value="@item.Name">@item.Name
+                 <input class="Input-group" type="checkbox" aria-label="Checkbox for text input" name="Teacher.Skills" value="@item.Name">@item.Name
                 }
         
           
                 
-                <span asp-validation-for="Teacher.Skill" class="text-danger"></span>
+                <span asp-validation-for="Teacher.Skills" class="text-danger"></span>
             </div>
            
             <div class="form-group">

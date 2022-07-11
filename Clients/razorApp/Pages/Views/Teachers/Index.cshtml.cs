@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
@@ -18,6 +19,7 @@ namespace razorApp.Pages.Views.Teachers
          [BindProperty]
         public List< TeacherViewModel>? Teachers { get; set; } 
         [BindProperty(SupportsGet =true)]
+     
         public string? TeachersCategory {get; set;}
        
 
@@ -38,7 +40,7 @@ namespace razorApp.Pages.Views.Teachers
            if(!string.IsNullOrEmpty(TeachersCategory)){
          
            TeachersCategory= TeachersCategory.First().ToString().ToUpper() + TeachersCategory.Substring(1);
-            Teachers= Teachers.Where(t=>t.Skills.Contains(TeachersCategory)).ToList();
+            Teachers= Teachers!.Where(t=>t.Skills!.Contains(TeachersCategory)).ToList();
            
            }
      

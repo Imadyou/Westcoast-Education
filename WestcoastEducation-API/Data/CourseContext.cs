@@ -4,9 +4,9 @@ using WestcoastEducation_API.Models;
 
 namespace WestcoastEducation_API.Data
 {
-  public class CourseContext : DbContext
+  public class CourseContext : IdentityDbContext
   {
-    public CourseContext(DbContextOptions options) : base(options) { 
+    public CourseContext(DbContextOptions<CourseContext> options) : base(options) { 
         }
 
     public DbSet<Course> Courses => Set<Course>();

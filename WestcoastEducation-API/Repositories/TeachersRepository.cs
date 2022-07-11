@@ -23,8 +23,10 @@ namespace WestcoastEducation_API.Repositories
     }
     public async Task AddTeacherAsync(PostTeacherViewModel model)
     {
-         var check= await _context.Teachers.Where(t=>t.Email==model.Email).SingleOrDefaultAsync();
-         if(check is not null){ throw new Exception($"Läraren med mailet: {model.Email} Finns redan i lärarelistan");}
+         var checkMail= await _context.Teachers.Where(t=>t.Email==model.Email).SingleOrDefaultAsync();
+         if(checkMail is not null){ throw new Exception($"Läraren med mailet: {model.Email} Finns redan i lärarelistan");}
+       var checkPhone= await _context.Teachers.Where(t=>t.PhoneNumber==model.PhoneNumber).SingleOrDefaultAsync();
+          if(checkPhone is not null){ throw new Exception($"Läraren med telefonnummer: {model.PhoneNumber} Finns redan i lärarelistan");}
 
          var NewTeacher= new Teacher();
          NewTeacher.FirstName=model.FirstName;
