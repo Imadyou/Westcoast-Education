@@ -38,7 +38,7 @@ namespace WestcoastEducation_API.Controllers
            return StatusCode(201);
             }
            
-           return StatusCode(500, "Det gicka fel när vi skulle spara kategorin!");
+           return StatusCode(500, "Något gick fel när vi skulle spara kategorin!");
  
             }
             catch (Exception ex)

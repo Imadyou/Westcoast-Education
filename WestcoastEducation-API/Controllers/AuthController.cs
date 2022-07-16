@@ -35,7 +35,7 @@ namespace Step03_ASP.NET_Identity.ViewModels
 
       var result = await _userManager.CreateAsync(user, model.Password);
       if(!result.Succeeded){
-        throw new Exception ("Gisk inte att registrea användaren");
+        throw new Exception ("Vi kunde inte registrea användaren");
       }
    
         return StatusCode(201, user);
