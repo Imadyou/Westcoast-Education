@@ -6,6 +6,7 @@
        <meta http-equiv="X-UA-Compatible" content="IE=edge">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
        <link rel="stylesheet" href="~/css/styles.css">
        
        <title>Westcoast Education - @ViewBag.PageTitle</title>
@@ -16,17 +17,20 @@
          <ul>
              <li><a asp-controller="Home" asp-action="Index">Start</a></li>
              <li><a asp-controller="Categories" asp-action="Index">Våra kurser</a></li>
-             <li><a href="#">Om Oss</a></li>
-             <li><a href="#">Login</a></li>
+             <li><a asp-controller="Auth" asp-action="Index">Registrera</a></li>
+             <li><a asp-controller="Home" asp-action="About">Om oss</a></li>
          </ul>
      </nav>
        <main>
        @RenderBody()
-
+  
        </main>
-
-     
+  
    </body>
-   <footer>Westcoast Education 2022 </footer>
+   <footer>Westcoast Education 2022 <a asp-controller="Home" asp-action="About">Om oss</a></footer>
    </html>
    
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script> 
+    @await RenderSectionAsync("Scripts", required: false)

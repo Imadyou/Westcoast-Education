@@ -27,8 +27,6 @@ namespace MvcApp.ViewModels.Courses
               throw new Exception("kunde inte hämta paketet från API application");
             }
             var courses =await response.Content.ReadFromJsonAsync<List<CourseByCategoryViewModel>>();
-            // var result =await response.Content.ReadAsStringAsync();
-            // var courses= JsonSerializer.Deserialize<List<CourseByCategoryViewModel>>(result,_options);
             return courses?? new List<CourseByCategoryViewModel>();
 
     }
@@ -44,8 +42,6 @@ namespace MvcApp.ViewModels.Courses
               throw new Exception("Det gick inte att hitta kursen!");
             }
             var course= await response.Content.ReadFromJsonAsync<CourseViewModel>();
-            // var result =await response.Content.ReadAsStringAsync();
-            // var course= JsonSerializer.Deserialize<CourseViewModel>(result,_options);
             return course??=new CourseViewModel();
     }
 

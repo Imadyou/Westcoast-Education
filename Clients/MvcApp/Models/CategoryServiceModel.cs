@@ -32,8 +32,5 @@ namespace MvcApp.Models
 
     }
     
-    
-    
-    
   }
 }

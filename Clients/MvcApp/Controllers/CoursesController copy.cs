@@ -33,7 +33,7 @@ namespace MvcApp.Controllers
             catch (Exception)
             {
                 
-              return StatusCode(500, "Det finns inga kurser med den kategori än...!");
+              return StatusCode(500, "Det finns inga kurser med denna kategori ...!");
             }
                  
         }
@@ -46,10 +46,10 @@ namespace MvcApp.Controllers
          var course=await _service.GetCourseById(id);
          return View("Details",course);
         }
-        catch (System.Exception)
+        catch (Exception)
         {
             
-            throw;
+             return StatusCode(500, $"Kunde inte hitta hämta kursen nummer: {id} ...!");
         }
     }
 

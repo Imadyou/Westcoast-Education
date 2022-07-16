@@ -32,10 +32,10 @@ namespace MvcApp.Controllers
               var categories =await _service.ListCategories();
               return View("Index",categories);
             }
-            catch (System.Exception)
+            catch (Exception)
             {
                 
-                throw;
+                return StatusCode(500,"Något gick snätt! vi kunde inte hämma kategorilistan.. ");
             }
                  
         }
