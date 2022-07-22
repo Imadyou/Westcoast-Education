@@ -4,19 +4,20 @@
 }
 <link rel="stylesheet" href="~/css/course-details.css">
 
-<h2>@ViewData["Title"]</h2>
+
 <article >
 <section class="wrapper">
+  <h2>@ViewData["Title"]</h2>
   <div class="course-description">
-    <div>Kurs Nummer @Model.Id</div>
-    <div>Kurs Titel @Model.Title</div>
-    <div>Kategori @Model.Subject</div>
-    <div>Längd @Model.CourseDuration</div>
-    <h3> Detalj @Model.Details</h3>
+    <div><h4>Kurs Nummer:</h4> @Model.Id</div><hr>
+    <div><h4>Kurs Titel:</h4> @Model.Title</div><hr>
+    <div><h4> Kategori:</h4> @Model.Subject</div><hr>
+    <div><h4>Längd:</h4> @Model.CourseDuration</div><hr>
+    <div><h4> Detalj:</h4> @Model.Details</div>
     <hr>
-    <h4>Beskrivning</h4>
+    <h4>Beskrivning:</h4>
     <p>@Model.Description</p>
-    <a class="go-back" a asp-controller="Categories" asp-action="Index"><i class="fa-solid fa-left-long"></i>Tillbaka till kurser</a>
+    <a class="go-back" asp-controller="Categories" asp-action="Index"><i class="fa-solid fa-left-long"></i>Tillbaka till kurser</a>
     </div>
   </section>
 </article>

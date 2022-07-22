@@ -26,7 +26,7 @@ h2 {
     display: flex;
     flex-direction: column;
     margin: auto;
-    padding: 1rem;
+    padding: 0.5rem;
     text-align: left;
     font-size: x-large;
     font-family: 'Roboto', sans-serif;
@@ -35,10 +35,10 @@ h2 {
     box-shadow: 0rem 0 1rem 0.2rem rgba(63, 50, 63, 0.6);
 }
 
-.btn a h3 {
+.btn a {
     text-decoration: none;
     color: aliceblue;
-    padding: 1rem 1rem;
+    padding: 0.2rem 0.3rem;
     opacity: 0.9;
     font-size: medium;
     border-radius: 2px;
