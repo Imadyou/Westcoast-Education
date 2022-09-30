@@ -35,7 +35,7 @@ namespace WestcoastEducation_API.Controllers
       var courseList = await _courseRepo.ListAllCoursesAsync();
       if (courseList is null)
       {
-        return NotFound("Kurs listan är tom läg till en ny kurs i lista och försök en gång till!.... ");
+        return NotFound("Kurs listan är tom läg till en ny kurs i listan och försök en gång till!.... ");
       }
       return Ok(courseList);
     }
