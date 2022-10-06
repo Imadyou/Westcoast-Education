@@ -130,7 +130,7 @@ namespace WestcoastEducation_API.Controllers
         {
           return NoContent();
         }
-        return StatusCode(500, "Ett fel inträffade när kursen sklulle ändras!");
+        return StatusCode(500, "Ett fel inträffade när kursen skulle ändras!");
       }
       catch (Exception ex)
       {
@@ -161,7 +161,7 @@ namespace WestcoastEducation_API.Controllers
         await _courseRepo.AddStudentToCourseAsync(courseId, studentEmail);
 
         if (await _courseRepo.SaveAllAsync()) { return NoContent(); }
-        return StatusCode(500, "Ett fel inträffade när vi sklulle lägga sutdneten till kursen!");
+        return StatusCode(500, "Ett fel inträffade när vi skulle lägga sutdneten till kursen!");
       }
       catch (Exception ex)
       {
