@@ -35,7 +35,7 @@ namespace MvcApp.Controllers
             catch (Exception)
             {
                 
-                return StatusCode(500,"Något gick snätt! vi kunde inte hämma kategorilistan.. ");
+                return StatusCode(500,"Något gick snätt! vi kunde inte hämta kategorilistan.. ");
             }
                  
         }
