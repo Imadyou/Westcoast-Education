@@ -5,76 +5,77 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = razorApp
 build_property.RootNamespace = razorApp
-build_property.ProjectDir = c:\Code\WbbutvecklingKurs2\Westcoast-Education\Clients\razorApp\
+build_property.ProjectDir = C:\D\Code\My_repos\Westcoast-Education\Clients\razorApp\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = c:\Code\WbbutvecklingKurs2\Westcoast-Education\Clients\razorApp
+build_property.MSBuildProjectDirectory = C:\D\Code\My_repos\Westcoast-Education\Clients\razorApp
 build_property._RazorSourceGeneratorDebug = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Error.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Index.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Privacy.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Courses/Create.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/Views/Courses/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcQ291cnNlc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Courses/Edit.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/Views/Courses/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcQ291cnNlc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Courses/Index.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/Views/Courses/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcQ291cnNlc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Students/Create.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/Views/Students/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcU3R1ZGVudHNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Students/Edit.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/Views/Students/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcU3R1ZGVudHNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Students/Index.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/Views/Students/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcU3R1ZGVudHNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Teachers/Create.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/Views/Teachers/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcVGVhY2hlcnNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Teachers/Edit.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/Views/Teachers/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcVGVhY2hlcnNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Views/Teachers/Index.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/Views/Teachers/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcVmlld3NcVGVhY2hlcnNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/_ViewImports.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/_ViewStart.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[c:/Code/WbbutvecklingKurs2/Westcoast-Education/Clients/razorApp/Pages/Shared/_Layout.cshtml]
+[C:/D/Code/My_repos/Westcoast-Education/Clients/razorApp/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-a6hi57yo31
