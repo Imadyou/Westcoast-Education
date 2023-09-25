@@ -3,46 +3,49 @@
     @* ViewData["Title"] = "Våra IT-kurser"; *@
     ViewBag.PageTitle = "Index";
 }
- <link rel="stylesheet" href="~/css/Form.css">
+<link rel="stylesheet" href="~/css/Form.css">
 
 
 <main>
- 
-  <div class="container">
-    <h1>Registrera</h1>
-    <hr>
-    <form name="myForm" asp-controller="Auth" asp-action="Index" method="post" >
- <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <div>
-      <label asp-for="@Model.Email">E-Postadress</label>
-      <input type="email" asp-for="@Model.Email"/>
-      <span asp-validation-for="@Model.Email" class="Valid"></span>
 
-    </div>
-       <div>
-      <label asp-for="@Model.Password">Lösenord</label>
-      <input type="Password" asp-for="@Model.Password"/>
-      <span asp-validation-for="@Model.Password" class="Valid"></span>
-     </div>
-   <div>
-      <label asp-for="@Model.ConfirmPassword">Lösenorsbekräftelse</label>
-      <input type="Password" asp-for="@Model.ConfirmPassword"/>
-      <span asp-validation-for="@Model.ConfirmPassword" class="Valid"></span>
-    </div>
-    <hr>
-      <button class="registerbtn"  type="submit"  value="Submit 
-      Form"> Registrera</button>
-     
-   </form> 
-   
-   @section Scripts{
-    @{
-     <partial name="_ValidationScriptsPartial"/>
-    }}
+    <div class="container">
+        <h1>Registrera</h1>
+        <hr>
+        <form name="myForm" asp-controller="Auth" asp-action="Index" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div>
+                <label asp-for="@Model.Email">E-Postadress</label>
+                <input type="email" asp-for="@Model.Email" />
+                <span asp-validation-for="@Model.Email" class="Valid"></span>
 
-   </Script>
-  </div>
-  </main>
+            </div>
+            <div>
+                <label asp-for="@Model.Password">Lösenord</label>
+                <input type="Password" asp-for="@Model.Password" />
+                <span asp-validation-for="@Model.Password" class="Valid"></span>
+            </div>
+            <div>
+                <label asp-for="@Model.ConfirmPassword">Lösenorsbekräftelse</label>
+                <input type="Password" asp-for="@Model.ConfirmPassword" />
+                <span asp-validation-for="@Model.ConfirmPassword" class="Valid"></span>
+            </div>
+            <hr>
+            <button class="registerbtn" type="submit" value="Submit
+      Form">
+                Registrera
+            </button>
+
+        </form>
+
+        @section Scripts{
+            @{
+                <partial name="_ValidationScriptsPartial" />
+            }
+        }
+
+        </Script>
+    </div>
+</main>
 
 
 

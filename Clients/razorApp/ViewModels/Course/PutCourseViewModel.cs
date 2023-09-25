@@ -9,18 +9,18 @@ namespace razorApp.ViewModels.Course
     public class PutCourseViewModel
     {
 
-       [Display(Name="Kurs Title")]
-         [Required(ErrorMessage ="Kurs Title är obligatoriskt")]
+        [Display(Name = "Kurs Title")]
+        [Required(ErrorMessage = "Kurs Title är obligatoriskt")]
         public string? CourseTitle { get; set; }
-         [Display(Name="Kurs Kategori")]
-        [Required(ErrorMessage ="Kurs Kategori är obligatorisk")]
+        [Display(Name = "Kurs Kategori")]
+        [Required(ErrorMessage = "Kurs Kategori är obligatorisk")]
         public string? Subject { get; set; }
-         [Display(Name="Längd")]
-        [Required(ErrorMessage ="Kurs Längden är obligatorisk")]
+        [Display(Name = "Längd")]
+        [Required(ErrorMessage = "Kurs Längden är obligatorisk")]
         public string? CourseDuration { get; set; }
-         [Display(Name="Beskrivning")]
+        [Display(Name = "Beskrivning")]
         public string? Description { get; set; }
-         [Display(Name="Detaljer")]
+        [Display(Name = "Detaljer")]
         public string? Details { get; set; }
     }
 }

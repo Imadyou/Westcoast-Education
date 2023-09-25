@@ -7,43 +7,44 @@ using System.Threading.Tasks;
 
 namespace MvcApp.ViewModels.Courses
 {
-  public class CourseServiceModel
-  {
-    private readonly IConfiguration _config;
-    private readonly JsonSerializerOptions _options;
-    public CourseServiceModel(IConfiguration config)
+    public class CourseServiceModel
     {
-      _config = config;
-      _options =new JsonSerializerOptions{PropertyNameCaseInsensitive=true};
-    }
-    
-    public async Task<List<CourseByCategoryViewModel>>ListCoursesByCatId(int id){
-          var baseUrl = _config.GetValue<string>("baseUrl");
+        private readonly IConfiguration _config;
+        private readonly JsonSerializerOptions _options;
+        public CourseServiceModel(IConfiguration config)
+        {
+            _config = config;
+            _options = new JsonSerializerOptions { PropertyNameCaseInsensitive = true };
+        }
+
+        public async Task<List<CourseByCategoryViewModel>> ListCoursesByCatId(int id)
+        {
+            var baseUrl = _config.GetValue<string>("baseUrl");
             var url = $"{baseUrl}/Courses/category/{id}";
-            using var http=new HttpClient();
+            using var http = new HttpClient();
             var response = await http.GetAsync(url);
-            if(!response.IsSuccessStatusCode)
+            if (!response.IsSuccessStatusCode)
             {
-              throw new Exception("kunde inte hämta paketet från API application");
+                throw new Exception("kunde inte hämta paketet från API application");
             }
-            var courses =await response.Content.ReadFromJsonAsync<List<CourseByCategoryViewModel>>();
-            return courses?? new List<CourseByCategoryViewModel>();
+            var courses = await response.Content.ReadFromJsonAsync<List<CourseByCategoryViewModel>>();
+            return courses ?? new List<CourseByCategoryViewModel>();
 
-    }
+        }
 
-    public async Task<CourseViewModel>GetCourseById(int id)
-    {
+        public async Task<CourseViewModel> GetCourseById(int id)
+        {
             var baseUrl = _config.GetValue<string>("baseUrl");
             var url = $"{baseUrl}/Courses/{id}";
-            using var http=new HttpClient();
+            using var http = new HttpClient();
             var response = await http.GetAsync(url);
-            if(!response.IsSuccessStatusCode)
+            if (!response.IsSuccessStatusCode)
             {
-              throw new Exception("Det gick inte att hitta kursen!");
+                throw new Exception("Det gick inte att hitta kursen!");
             }
-            var course= await response.Content.ReadFromJsonAsync<CourseViewModel>();
-            return course??=new CourseViewModel();
-    }
+            var course = await response.Content.ReadFromJsonAsync<CourseViewModel>();
+            return course ??= new CourseViewModel();
+        }
 
-  }
+    }
 }

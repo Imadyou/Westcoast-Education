@@ -10,42 +10,44 @@ namespace WestcoastEducation_API.Controllers
     [Route("api/v1/categories")]
     public class CategoryController : ControllerBase
     {
-    private readonly ICategoriesRepository _categoryRepo;
-    public CategoryController(ICategoriesRepository categoryRepo)
-    {
-      _categoryRepo = categoryRepo;
+        private readonly ICategoriesRepository _categoryRepo;
+        public CategoryController(ICategoriesRepository categoryRepo)
+        {
+            _categoryRepo = categoryRepo;
 
-    }
+        }
 
         [HttpGet("list")]
-        public async Task<ActionResult<List<CategoryViewModel>>>ListALLCategories(){
-            
-          var list= await _categoryRepo.ListAllCategoriesAsync();
-          return Ok(list);
-           
+        public async Task<ActionResult<List<CategoryViewModel>>> ListALLCategories()
+        {
+
+            var list = await _categoryRepo.ListAllCategoriesAsync();
+            return Ok(list);
+
         }
-      
-       
-     
+
+
+
         [HttpPost()]
         public async Task<ActionResult> AddCategory(PostCategoryViewModel model)
         {
             try
             {
-             await _categoryRepo.AddCategoryAsync(model);
-            if(await _categoryRepo.SaveAllAsync()){
+                await _categoryRepo.AddCategoryAsync(model);
+                if (await _categoryRepo.SaveAllAsync())
+                {
 
-           return StatusCode(201);
-            }
-           
-           return StatusCode(500, "Något gick fel när vi skulle spara kategorin!");
- 
+                    return StatusCode(201);
+                }
+
+                return StatusCode(500, "Något gick fel när vi skulle spara kategorin!");
+
             }
             catch (Exception ex)
             {
-                
-              return StatusCode (500, ex.Message );
-            };          
+
+                return StatusCode(500, ex.Message);
+            };
         }
 
         [HttpDelete("{id}")]
@@ -62,10 +64,10 @@ namespace WestcoastEducation_API.Controllers
             }
             catch (Exception ex)
             {
-                
-               return StatusCode (500, ex.Message);
+
+                return StatusCode(500, ex.Message);
             }
-       
+
         }
     }
 }

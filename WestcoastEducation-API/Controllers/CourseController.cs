@@ -106,7 +106,6 @@ namespace WestcoastEducation_API.Controllers
 
         if (await _courseRepo.SaveAllAsync())
         {
-
           return StatusCode(201);
         }
         else { return StatusCode(500, "Det gick inte att spara kursen"); }

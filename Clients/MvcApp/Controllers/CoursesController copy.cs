@@ -14,44 +14,44 @@ namespace MvcApp.Controllers
     [Route("[controller]")]
     public class coursesController : Controller
     {
-    private readonly IConfiguration _config;
-    private readonly CourseServiceModel _service;
-    public coursesController(IConfiguration config)
-    {
-      _config = config;
-      _service=new CourseServiceModel(_config);
-    }
-[HttpGet("{id}")]
-    public async Task<IActionResult> Index(int id)
-        {  
+        private readonly IConfiguration _config;
+        private readonly CourseServiceModel _service;
+        public coursesController(IConfiguration config)
+        {
+            _config = config;
+            _service = new CourseServiceModel(_config);
+        }
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Index(int id)
+        {
             try
             {
-                
-              var courses =await _service.ListCoursesByCatId(id);
-              return View("Index",courses);
+
+                var courses = await _service.ListCoursesByCatId(id);
+                return View("Index", courses);
             }
             catch (Exception)
             {
-                
-              return StatusCode(500, "Det finns inga kurser med denna kategori ...!");
+
+                return StatusCode(500, "Det finns inga kurser med denna kategori ...!");
             }
-                 
+
         }
 
-     [HttpGet("by/{id}")]
-    public async Task<IActionResult> Details(int id)
-    {
-        try
+        [HttpGet("by/{id}")]
+        public async Task<IActionResult> Details(int id)
         {
-         var course=await _service.GetCourseById(id);
-         return View("Details",course);
+            try
+            {
+                var course = await _service.GetCourseById(id);
+                return View("Details", course);
+            }
+            catch (Exception)
+            {
+
+                return StatusCode(500, $"Kunde inte hitta hämta kursen nummer: {id} ...!");
+            }
         }
-        catch (Exception)
-        {
-            
-             return StatusCode(500, $"Kunde inte hitta hämta kursen nummer: {id} ...!");
-        }
-    }
 
     }
 }

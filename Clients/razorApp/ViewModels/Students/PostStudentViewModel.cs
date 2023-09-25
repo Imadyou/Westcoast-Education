@@ -8,22 +8,22 @@ namespace razorApp.ViewModels.Students
 {
     public class PostStudentViewModel
     {
-        [Display(Name="Förnamn")]
-        [Required(ErrorMessage ="Förnamn är obligatoriskt")]
-         public string? FirstName { get; set; }
-        [Display(Name="Efternamn")]
-        [Required(ErrorMessage ="EfterNamn är obligatoriskt")]
+        [Display(Name = "Förnamn")]
+        [Required(ErrorMessage = "Förnamn är obligatoriskt")]
+        public string? FirstName { get; set; }
+        [Display(Name = "Efternamn")]
+        [Required(ErrorMessage = "EfterNamn är obligatoriskt")]
         public string? LastName { get; set; }
-        [Display(Name="E-Post")]
-         [Required(ErrorMessage ="E-post är obligatoriskt")]
-        [EmailAddress(ErrorMessage ="E-post adressen är ogilitig")]
+        [Display(Name = "E-Post")]
+        [Required(ErrorMessage = "E-post är obligatoriskt")]
+        [EmailAddress(ErrorMessage = "E-post adressen är ogilitig")]
         public string? Email { get; set; }
-         [Display(Name="Telefonnummer")]
-         [Required(ErrorMessage ="Telefonnummr är obligatoriskt")]
-         [Phone]
+        [Display(Name = "Telefonnummer")]
+        [Required(ErrorMessage = "Telefonnummr är obligatoriskt")]
+        [Phone]
         public int PhoneNumber { get; set; }
-        [Display(Name="Adress")]
-        [Required(ErrorMessage ="Adress är obligatorisk")]
+        [Display(Name = "Adress")]
+        [Required(ErrorMessage = "Adress är obligatorisk")]
         public string? Address { get; set; }
     }
 }

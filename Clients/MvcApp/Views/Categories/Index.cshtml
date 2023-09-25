@@ -8,15 +8,15 @@
 
 <article>
     <section class="gallery-wrapper">
-          
+
         @foreach (var category in Model!)
         {
             <div class="gallery-card">
 
-             <a asp-controller="Courses" asp-action="Index" asp-route-id="@category.CategoryId"> <h2>@category.Name</h2></a>
-            
+                <a asp-controller="Courses" asp-action="Index" asp-route-id="@category.CategoryId"> <h2>@category.Name</h2></a>
+
             </div>
-           
+
         }
     </section>
 </article>
