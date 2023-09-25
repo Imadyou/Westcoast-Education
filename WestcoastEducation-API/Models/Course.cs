@@ -15,11 +15,11 @@ namespace WestcoastEducation_API.Models
         public string? Duration { get; set; }
         public string? Description { get; set; }
         public string? Details { get; set; }
-        public int? CategoryId{get; set;}
+        public int? CategoryId { get; set; }
         [ForeignKey("CategoryId")]
-        public Category Category{get;set;}=new Category();
-        
-        public ICollection<Student> Students { get; set; }= new List<Student>();
-        public ICollection<Teacher> Teachers { get; set; }=new List<Teacher>();
+        public Category Category { get; set; } = new Category();
+
+        public ICollection<Student> Students { get; set; } = new List<Student>();
+        public ICollection<Teacher> Teachers { get; set; } = new List<Teacher>();
     }
 }

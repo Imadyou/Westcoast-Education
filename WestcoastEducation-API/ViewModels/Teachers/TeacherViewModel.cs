@@ -8,12 +8,12 @@ namespace WestcoastEducation_API.ViewModels.Teachers
 {
     public class TeacherViewModel
     {
-      [Key]
-        public int Id {get; set;}
+        [Key]
+        public int Id { get; set; }
         public string? Name { get; set; }
         public string? Email { get; set; }
         public int PhoneNumber { get; set; }
         public string? Address { get; set; }
-        public List<string>?Skills {get;set;}
+        public List<string>? Skills { get; set; }
     }
 }

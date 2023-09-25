@@ -7,8 +7,8 @@ using System.Threading.Tasks;
 namespace WestcoastEducation_API.ViewModels.Students
 {
     public class PostStudentViewModel
-    { 
-       
+    {
+
         public string? FirstName { get; set; }
         public string? LastName { get; set; }
         public string? Email { get; set; }

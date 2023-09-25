@@ -7,9 +7,9 @@ using Microsoft.AspNetCore.Identity;
 
 namespace WestcoastEducation_API.Models
 {
-    public class PersonInfo 
+    public class PersonInfo
     {
-         [Key]
+        [Key]
         public int Id { get; set; }
         public string? FirstName { get; set; }
         public string? LastName { get; set; }

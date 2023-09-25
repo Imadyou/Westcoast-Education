@@ -8,10 +8,6 @@ namespace razorApp.ViewModels.Course
 {
     public class CreateCourseViewModel
     {
-        [Display(Name = "Kurs nummer")]
-        [Required(ErrorMessage = "Kurs nummer är obligatoriskt")]
-        [MinLength(4, ErrorMessage = "Kurs nummer måste var minst 4 heltal")]
-        public int CourseId { get; set; }
         [Display(Name = "Kurs Title")]
         [Required(ErrorMessage = "Kurs Title är obligatoriskt")]
         public string? CourseTitle { get; set; }

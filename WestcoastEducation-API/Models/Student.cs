@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace WestcoastEducation_API.Models
 {
-    public class Student:PersonInfo
+    public class Student : PersonInfo
     {
-        public ICollection<Course>?  Courses {get; set;}= new List<Course>();
+        public ICollection<Course>? Courses { get; set; } = new List<Course>();
     }
 }

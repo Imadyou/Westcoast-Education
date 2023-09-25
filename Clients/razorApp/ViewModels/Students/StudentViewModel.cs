@@ -7,16 +7,17 @@ using System.Threading.Tasks;
 namespace razorApp.ViewModels.Students
 {
     public class StudentViewModel
-    {     [Display(Name=("Student-Id"))]
-         public int Id { get; set; }
-         [Display(Name="Namn")]
-      
+    {
+        [Display(Name = ("Student-Id"))]
+        public int Id { get; set; }
+        [Display(Name = "Namn")]
+
         public string? Name { get; set; }
-        [Display(Name="E-post")]
+        [Display(Name = "E-post")]
         public string? Email { get; set; }
-        [Display(Name="TelefonNummer")]
+        [Display(Name = "TelefonNummer")]
         public int PhoneNumber { get; set; }
-        [Display(Name="Adress")]
+        [Display(Name = "Adress")]
         public string? Address { get; set; }
     }
 }

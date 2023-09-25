@@ -7,7 +7,7 @@ namespace razorApp.ViewModels.Teacher
 {
     public class CategoryViewModel
     {
-          public int CategoryId { get; set; }
+        public int CategoryId { get; set; }
         public string? Name { get; set; }
     }
 }

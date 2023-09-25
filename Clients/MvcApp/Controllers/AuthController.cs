@@ -24,6 +24,7 @@ namespace MvcApp.Controllers
 
             _service = new AuthServiceModel(_config);
         }
+
         [HttpGet]
         public IActionResult Index()
         {
