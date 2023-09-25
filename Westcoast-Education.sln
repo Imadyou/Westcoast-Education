@@ -1,31 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30114.105
+# Visual Studio Version 17
+VisualStudioVersion = 17.7.34024.191
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WEducation-API", "Weducation-API\WEducation-API.csproj", "{5CD66D35-9B3A-4EB5-BA1F-738F688534FC}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WestcoastEducation-API", "WestcoastEducation-API\WestcoastEducation-API.csproj", "{F7D2515B-BE8D-47BC-9850-373865C812C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WestcoastEducation-API", "WestcoastEducation-API\WestcoastEducation-API.csproj", "{F7D2515B-BE8D-47BC-9850-373865C812C3}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Clients", "Clients", "{43D79D11-6A73-450D-84D5-51ABAA7FBAED}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MvcApp", "Clients\MvcApp\MvcApp.csproj", "{B860466A-773A-496D-88FD-A40DD126BF2A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MvcApp", "Clients\MvcApp\MvcApp.csproj", "{B860466A-773A-496D-88FD-A40DD126BF2A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "razorApp", "Clients\razorApp\razorApp.csproj", "{CD1185BC-E2F4-419D-A9CE-6ADFB7C93CEE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "razorApp", "Clients\razorApp\razorApp.csproj", "{CD1185BC-E2F4-419D-A9CE-6ADFB7C93CEE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{5CD66D35-9B3A-4EB5-BA1F-738F688534FC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5CD66D35-9B3A-4EB5-BA1F-738F688534FC}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5CD66D35-9B3A-4EB5-BA1F-738F688534FC}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5CD66D35-9B3A-4EB5-BA1F-738F688534FC}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F7D2515B-BE8D-47BC-9850-373865C812C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F7D2515B-BE8D-47BC-9850-373865C812C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F7D2515B-BE8D-47BC-9850-373865C812C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -38,6 +29,9 @@ Global
 		{CD1185BC-E2F4-419D-A9CE-6ADFB7C93CEE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD1185BC-E2F4-419D-A9CE-6ADFB7C93CEE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{CD1185BC-E2F4-419D-A9CE-6ADFB7C93CEE}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{B860466A-773A-496D-88FD-A40DD126BF2A} = {43D79D11-6A73-450D-84D5-51ABAA7FBAED}
