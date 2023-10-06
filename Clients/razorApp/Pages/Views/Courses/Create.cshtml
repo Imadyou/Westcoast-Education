@@ -18,11 +18,22 @@
                 <input asp-for="Course.CourseTitle" class="form-control" />
                 <span asp-validation-for="Course.CourseTitle" class="text-danger"></span>
             </div>
-            <div class="form-group">
+           @*  <div class="form-group">
                 <label asp-for="Course.Subject" class="control-label"></label>
                 <input asp-for="Course.Subject" class="form-control" />
                 <span asp-validation-for="Course.Subject" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label for="Course.Subject">Kategori:</label>
+                <select class="form-control" id="Category" name="Course.Subject">
+                    <option value="">Välj kategori 🔽</option>
+                    @foreach (var category in Model.Categories)
+                    {
+                        <option value="@category.Name">@category.Name</option>
+                    }
+                </select>
             </div>
+
             <div class="form-group">
                 <label asp-for="Course.CourseDuration" class="control-label"></label>
                 <input asp-for="Course.CourseDuration" class="form-control" />

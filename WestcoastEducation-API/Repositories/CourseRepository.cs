@@ -45,7 +45,6 @@ namespace WestcoastEducation_API.Repositories
                 courseToAdd.Category = catToAdd;
                 await _context.Courses.AddAsync(courseToAdd);
             }
-
         }
 
         public async Task DeleteCourseAsync(int id)

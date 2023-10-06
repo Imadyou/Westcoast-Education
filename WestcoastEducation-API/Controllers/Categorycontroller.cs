@@ -20,13 +20,21 @@ namespace WestcoastEducation_API.Controllers
         [HttpGet("list")]
         public async Task<ActionResult<List<CategoryViewModel>>> ListALLCategories()
         {
+            try
+            {
 
-            var list = await _categoryRepo.ListAllCategoriesAsync();
-            return Ok(list);
+                var list = await _categoryRepo.ListAllCategoriesAsync();
+
+                if (list is not null) { return Ok(list); }
+
+                return NotFound("Det finns inga kategorier, lägg till ny kategori!.");
+            }
+            catch (Exception ex)
+            {
+                return StatusCode(500, ex.Message);
+            }
 
         }
-
-
 
         [HttpPost()]
         public async Task<ActionResult> AddCategory(PostCategoryViewModel model)
